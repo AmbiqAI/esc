@@ -460,11 +460,6 @@ def main(args):
         with open(target_files[train_set], 'r') as file: # pylint: disable=unspecified-encoding
             filepaths = file.readlines()
             random.shuffle(filepaths)
-            if datasize_noise != -1:
-                if train_set=='train':
-                    filepaths = filepaths[:datasize_noise]
-                else:
-                    filepaths = filepaths[:int(datasize_noise / 5)]
 
         blk_size = int(np.floor(len(filepaths) / args.num_procs))
         sub_src = []

@@ -118,8 +118,8 @@ class SeClass(NNInferClass):
         file.close()
 
         data, samplerate = sf.read(f"{result_folder}/output_{fname}")
-        sf.write(f"{result_folder}/enhanced_{fname}", data[:,1], samplerate)
-        print(f'Check your enhanced speeech in {result_folder}/enhanced_{fname}')
+        sf.write(f"{result_folder}/output_{fname}", data[:,1], samplerate)
+        print(f'Check your enhanced speeech in {result_folder}/output{fname}')
 
 def main(args):
     """main function"""

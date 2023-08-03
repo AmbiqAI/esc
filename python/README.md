@@ -3,7 +3,7 @@ This document explains how we train an environmental sound classification (ESC) 
 # Loss functions
 It is worth to compare the performance based on the loss functions listed in Table 1 (see [here](https://www.microsoft.com/en-us/research/uploads/prod/2021/08/23.pdf)).
 ## Prerequisite
-Note that all python scripts described here are all under the folder `nnse/python`
+Note that all python scripts described here are all under the folder `esc/python`
 - Python 3.7+
 - (optional but recommended) Create a python [virtualenv](https://docs.python.org/3/library/venv.html) and install python dependencies into it:
   - Linux
@@ -28,48 +28,44 @@ Note that all python scripts described here are all under the folder `nnse/pytho
 Before working on training SE model, we need to download the required datasets. Please read on their license agreements carefully in [here](../docs/README.md).
 ## Quick start
 We provided one already trained model. The user can directly try on it. \
-`Small size model:` `~100k` parameters
+`Small size model:` `~60k` parameters
 ```cmd
-  $ python test_se.py --epoch_loaded=50 --nn_arch='nn_arch/def_se_nn_arch72_mel.txt' --recording=1  --feat_type='mel' 
+  $ python test_esc.py --epoch_loaded=1517 --nn_arch='nn_arch/def_esc_nn_arch.txt' --recording=1  --feat_type='mel' 
 ```
 `Input argruments`:
-  * `--nn_arch`: it will load the definition of NN architecture in `nn_arch/def_se_nn_arch72_mel.txt`. 
+  * `--nn_arch`: it will load the definition of NN architecture in `nn_arch/def_esc_nn_arch.txt`. 
   * `--epoch_loaded`: it will load the model saved in epoch = 50.
   * `--recording`:
-    * The argument `--recording=1` means it will, first, record your speech for 10 seconds and save it in `test_wavs/speech.wav`. Second, use `test_wavs/speech.wav` as input to run the inference and check its result.
-    * Alternatively, you can run the already saved wave file via setting `--recording=0`. This will directly use the already saved wave file `--test_wavefile='test_wavs/speech.wav'` without recording.
+    * The argument `--recording=1` means it will, first, record your speech for 10 seconds and save it in `test_wavs/speech.wav`. Second, use `test_wavs/siren.wav` as input to run the inference and check its result.
+    * Alternatively, you can run the already saved wave file via setting `--recording=0`. This will directly use the already saved wave file `--test_wavefile='test_wavs/siren.wav'` without recording.
       ```py
-      $ python test_se.py --epoch_loaded=50 --nn_arch='nn_arch/def_se_nn_arch72_mel.txt' --recording=0  --feat_type='mel' --test_wavefile='test_wavs/speech.wav' 
+      $ python test_esc.py --epoch_loaded=1517 --nn_arch='nn_arch/def_esc_nn_arch.txt' --recording=0  --feat_type='mel' --test_wavefile='test_wavs/siren.wav' 
       ```
   * `--feat_type`: type of feature extraction.
     - `mel`: mel spectrogram
     - `pspec`: power spectrogram
 
 `Outputs:`
-  * The enhanced speech is located at `test_result/enhanced_speech.wav`. 
+  * The enhanced speech is located at `test_result/output_siren.wav`. 
 
 ## Training procedure
 1. Feature extraction and save your features as tfrecord (see [here](https://www.tensorflow.org/guide/data) and [here](https://www.tensorflow.org/guide/data_performance)). Type
     ```cmd
-      $ python data_se.py --download=1 --dataset_noise=30000                     
+      $ python data_esc.py --download=1                  
     ```
     * `--download`:
       * `--download=1`: it will automatically download all of the training data and then start to work on feature extraction.
       * `--download=0`: it will assume dataset had been downloaded and start to work on feature extraction.
-    * `--datasize_noise`: the size of training dataset per noise, e.g.,
-      * `--datasize_noise=30000`: it randomly chooses 30000 speech samples on the training dataset (total size of training dataset is `93118`)
-      * `--datasize_noise=-1`: it uses the total size of training dataset 
-      (`99318` speech samples)
-            
+
 2. Train your model. Type
     ```cmd
-      $ python train_se.py --epoch_loaded='random' --nn_arch='nn_arch/def_se_nn_arch72_mel.txt' --feat_type='mel' 
+      $ python train_esc.py --epoch_loaded='random' --nn_arch='nn_arch/def_esc_nn_arch.txt' --feat_type='mel' 
     ```
     * The argument `--epoch_loaded` represents which epoch of the weight table to be loaded
       - `--epoch_loaded='random'`means you start to train NN from a   randomly initiialized set of weights
       - `--epoch_loaded='latest'`means you start to train NN from the lateset set of weights of that epoch to be saved
       - `--epoch_loaded=10` (or any non-negative integer) means we will attempt to load a model from the previously saved epoch=10 if it exists.
-    * The argument `--nn_arch='nn_arch/def_se_nn_arch72_mel.txt'` will load the definition of NN architecture in `nn_arch/def_se_nn_arch72_mel.txt` (see [here](nn_arch/def_s2i_nn_arch.txt)). Also, the trained model is saved in the folder `models_trained/def_se_nn_arch72_mel`. Note that the foldername `def_se_nn_arch72_mel` is the same as definition of nn architecture, `def_se_nn_arch72_mel.txt`, except of removing the prefix `def_` and suffix `.txt`.
+    * The argument `--nn_arch='nn_arch/def_esc_nn_arch.txt'` will load the definition of NN architecture in `nn_arch/def_esc_nn_arch.txt` (see [here](nn_arch/def_s2i_nn_arch.txt)). Also, the trained model is saved in the folder `models_trained/def_esc_nn_arch`. Note that the foldername `def_esc_nn_arch` is the same as definition of nn architecture, `def_esc_nn_arch.txt`, except of removing the prefix `def_` and suffix `.txt`.
       - `NN architecture`: our nn architecture only supports sequential model (see the example [here](nn_arch/def_s2i_nn_arch.txt)). 
         - The layer type supports `fc`, `lstm`, `conv1d`
         - Activation type supports `relu6`, `tanh`, `sigmoid`, `linear`
@@ -78,22 +74,22 @@ We provided one already trained model. The user can directly try on it. \
       - `pspec`: power spectrogram
 3.  Test from recorded wave file. Type
     ```cmd
-      $ python test_se.py --epoch_loaded=50 --nn_arch='nn_arch/def_se_nn_arch72_mel.txt' --recording=1  --feat_type='mel' 
+      $ python test_ese.py --epoch_loaded=50 --nn_arch='nn_arch/def_esc_nn_arch.txt' --recording=1  --feat_type='mel' 
     ```
     `Input Arguments:`
 
-      * Here we provide an already trained model. Its nn architecture is defined in `nn_arch/def_se_nn_arch72_mel.txt`. You can change to your own model later.
-      * The argument `--nn_arch='nn_arch/def_se_nn_arch72_mel.txt'` will load the definition of NN architecture in `nn_arch/def_se_nn_arch72_mel.txt`. 
+      * Here we provide an already trained model. Its nn architecture is defined in `nn_arch/def_esc_nn_arch.txt`. You can change to your own model later.
+      * The argument `--nn_arch='nn_arch/def_esc_nn_arch.txt'` will load the definition of NN architecture in `nn_arch/def_esc_nn_arch.txt`. 
       * The argument `--epoch_loaded=50` means it will load the model saved in epoch = 50.
       * `--recording`:
         * The argument `--recording=1` means it will, first, record your speech for 10 seconds and save it in `test_wavs/speech.wav`. Second, use `test_wavs/speech.wav` as input to run the inference and check its result.
-        * Alternatively, you can run the already saved wave file via setting `--recording=0`. This will directly use the already saved wave file `--test_wavefile='test_wavs/speech.wav'` without recording.
+        * Alternatively, you can run the already saved wave file via setting `--recording=0`. This will directly use the already saved wave file `--test_wavefile='test_wavs/siren.wav'` without recording.
       * `--feat_type='mel'`: type of feature extraction.
         - `mel`: mel spectrogram
         - `pspec`: power spectrogram
 
     `Outputs:`
-    * The enhanced speech is located at `test_results/enhanced_speech.wav`. 
+    * The enhanced speech is located at `test_results/output_speech.wav`. 
 
 # Convert TF-model to C table
 To run the model on the embedded system, Apollo4 in our cae, we need a tool to support
