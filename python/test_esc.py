@@ -189,7 +189,7 @@ if __name__ == "__main__":
     argparser.add_argument(
         '-v',
         '--test_wavefile',
-        default = 'test_wavs/car_horn.wav',
+        default = 'test_wavs/siren.wav',
         help    = 'The wavfile name to be tested')
     # ["unknown", "dog_bark", "gun_shot", "siren", "car_horn", "baby_crying"]
     argparser.add_argument(
@@ -201,7 +201,7 @@ if __name__ == "__main__":
 
     argparser.add_argument(
         '--epoch_loaded',
-        default=1517, # 70
+        default=2233, # 70
         help='starting epoch')
 
     main(argparser.parse_args())
