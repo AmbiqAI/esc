@@ -201,11 +201,6 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 len_sp_last = 0
                 pattern = r'(\.wav$|\.flac$)'
 
-                # # read filler speech
-                speech_filler = self.audio_load(
-                    self.wavs_sp[i % len(self.wavs_sp)],
-                    self.feat_inst.sample_rate)
-
                 # read filler noise
                 noise = self.audio_load(
                     self.wavs_noise[i % len(self.wavs_noise)],
@@ -274,6 +269,10 @@ class FeatMultiProcsClass(multiprocessing.Process):
                         etimes += [etime + len_sp_last]
 
                         if np.random.uniform(0, 1) < 0.5:
+                            # # read filler speech
+                            speech_filler = self.audio_load(
+                                self.wavs_sp[(2*i) % len(self.wavs_sp)],
+                                self.feat_inst.sample_rate)
                             random.shuffle(SNR_DBS)
                             speech_filler = self.audio_set_len(speech_filler, len(speech0))
                             speech0, _ = add_noise.add_noise(
