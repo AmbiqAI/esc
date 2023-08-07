@@ -425,7 +425,7 @@ def main(args):
     folders_sp =["data/train_speech.csv", "data/test_speech.csv"]
     wavs_sp =parse_wavs(folders_sp)
 
-    folders_noise =["data/train_noise.csv", "data/test_noise.csv"]
+    folders_noise =["data/train_noise_fsd50k.csv", "data/test_noise_fsd50k.csv"]
     wavs_noise =parse_wavs(folders_noise, start=0)
 
     folders_noise =["data/train_noise_musan.csv", "data/test_noise_musan.csv"]

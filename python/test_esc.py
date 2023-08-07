@@ -189,7 +189,7 @@ if __name__ == "__main__":
     argparser.add_argument(
         '-v',
         '--test_wavefile',
-        default = 'test_wavs/siren.wav',
+        default = 'test_wavs/speech_3.wav',
         help    = 'The wavfile name to be tested')
     # ["unknown", "dog_bark", "gun_shot", "siren", "car_horn", "baby_crying"]
     argparser.add_argument(
