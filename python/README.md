@@ -74,7 +74,7 @@ We provided one already trained model. The user can directly try on it. \
       - `pspec`: power spectrogram
 3.  Test from recorded wave file. Type
     ```cmd
-      $ python test_ese.py --epoch_loaded=50 --nn_arch='nn_arch/def_esc_nn_arch.txt' --recording=1  --feat_type='mel' 
+      $ python test_esc.py --epoch_loaded=50 --nn_arch='nn_arch/def_esc_nn_arch.txt' --recording=1  --feat_type='mel' 
     ```
     `Input Arguments:`
 
