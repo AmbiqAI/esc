@@ -20,7 +20,13 @@ from data_esc import params_audio as PARAM_AUDIO
 SHOW_HISTOGRAM  = False
 NP_INFERENCE    = False
 
-CLASSSES_SET=["unknown", "dog_bark", "gun_shot", "siren_car_horn", "baby_crying"]
+CLASSSES_SET=[
+    "unknown",
+    "dog_bark",
+    "gun_shot",
+    "siren_car_horn",
+    "baby_crying"]
+
 class SeClass(NNInferClass):
     """
     Class to handle SE model
@@ -60,8 +66,11 @@ class SeClass(NNInferClass):
         result_folder = 'test_results'
         os.makedirs(result_folder, exist_ok=True)
         _, fname = os.path.split(wavefile)
+        folder = re.sub(r'\.wav', '', fname)
+        result_folder = f"{result_folder}/{folder}"
+        os.makedirs(result_folder, exist_ok=True)
         params_audio = self.params_audio
-        file = wave.open(f"{result_folder}/output_{fname}", "wb")
+        file = wave.open(f"{result_folder}/output.wav", "wb")
         file.setnchannels(2)
         file.setsampwidth(2)
         file.setframerate(params_audio['sample_rate'])
@@ -89,7 +98,7 @@ class SeClass(NNInferClass):
                 feat, spec, est = self.frame_proc_tf(data_frame, return_all = True)
             est = scipy.special.softmax(est)
             print(f": {CLASSSES_SET[np.argmax(est)]}: {est.max():.2f}")
-            out = np.ones((params_audio['hop'],)) * est[0]
+            out = np.ones((params_audio['hop'],)) * float(np.argmax(est)) /5
             tfmasks += [est]
             feats   += [feat]
             specs   += [spec]
@@ -104,22 +113,21 @@ class SeClass(NNInferClass):
         feats   = np.array(feats)
         specs   = np.array(specs)
 
-        fig_name = re.sub(r'\.wav', '.pdf', fname)
-
         display_stft_tfmask_esc(
             data,
             specs.T,
             feats.T,
             tfmasks.T,
             sample_rate=params_audio['sample_rate'],
-            print_name=f"{result_folder}/output_{fig_name}",
+            print_name=f"{result_folder}/output.pdf",
             mask_label=CLASSSES_SET)
 
         file.close()
 
-        data, samplerate = sf.read(f"{result_folder}/output_{fname}")
-        sf.write(f"{result_folder}/output_{fname}", data[:,1], samplerate)
-        print(f'Check your enhanced speeech in {result_folder}/output{fname}')
+        data, samplerate = sf.read(f"{result_folder}/output.wav")
+        savewav = f"{result_folder}/est.wav"
+        sf.write(f"{savewav}", data[:,1], samplerate)
+        print(f'Check your environmental sound classification in {savewav}')
 
 def main(args):
     """main function"""

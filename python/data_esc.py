@@ -29,7 +29,7 @@ DOWLOAD_DATA = False
 REVERB = True
 FRAMES_TARGET_DELAY = 20
 TARGETS=[
-    "unknow",
+    "unknown",
     "dog_bark",
     "gun_shot",
     "siren_car_horn",
@@ -205,7 +205,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 noise = self.audio_load(
                     self.wavs_noise[i % len(self.wavs_noise)],
                     self.feat_inst.sample_rate)
-      
+
                 noise = self.audio_rep_len(
                             noise,
                             self.feat_inst.sample_rate * 12)
@@ -395,12 +395,13 @@ class FeatMultiProcsClass(multiprocessing.Process):
                             pass
 def parse_wavs(files_sp, start=1):
     wavs_sp = {"train": [], "test": []}
-    for i, set0 in enumerate(["train", "test"]):
-        with open(files_sp[i], 'r') as file:
-            lines = file.readlines()
-            for line in lines[start:]:
-                fname = line.strip().split(',')[0]
-                wavs_sp[set0] += [fname]
+    for file_sp in files_sp:
+        for i, set0 in enumerate(["train", "test"]):
+            with open(file_sp[i], 'r') as file:
+                lines = file.readlines()
+                for line in lines[start:]:
+                    fname = line.strip().split(',')[0]
+                    wavs_sp[set0] += [fname]
 
     return wavs_sp
 
@@ -422,23 +423,15 @@ def main(args):
             entity=args.wandb_entity,
             job_type="data-update")
         wandb.config.update(args)
-    folders_sp =["data/train_speech.csv", "data/test_speech.csv"]
+    folders_sp =[["data/train_speech.csv", "data/test_speech.csv"]]
     wavs_sp =parse_wavs(folders_sp)
 
-    folders_noise =["data/train_noise_fsd50k.csv", "data/test_noise_fsd50k.csv"]
+    folders_noise =[
+        ["data/train_noise_fsd50k.csv", "data/test_noise_fsd50k.csv"],
+        ["data/train_noise_musan.csv", "data/test_noise_musan.csv"],
+        ["data/train_noise_wham.csv", "data/test_noise_wham.csv"]]
     wavs_noise =parse_wavs(folders_noise, start=0)
 
-    folders_noise =["data/train_noise_musan.csv", "data/test_noise_musan.csv"]
-    wavs_musun =parse_wavs(folders_noise, start=0)
-
-    folders_noise =["data/train_noise_wham.csv", "data/test_noise_wham.csv"]
-    wavs_wham =parse_wavs(folders_noise, start=0)
-
-    wavs_noise['train'] += wavs_musun['train']
-    wavs_noise['train'] += wavs_wham['train']
-
-    wavs_noise['test'] += wavs_musun['test']
-    wavs_noise['test'] += wavs_wham['test']
 
     sets_categories = ['train', 'test']
 
