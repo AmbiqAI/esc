@@ -181,14 +181,11 @@ class FeatMultiProcsClass(multiprocessing.Process):
         """
         convert np array to tfrecord
         """
-        for pt in range(4):
+        for gain in np.arange(0.05, 1.0, 0.05):
             random.shuffle(fnames)
             random.shuffle(self.wavs_sp)
             random.shuffle(self.wavs_noise)
-            if pt % 2==0:
-                reverbing=False
-            else:
-                reverbing=True
+            reverbing=True
             for i in range(len(fnames) >> 1):
                 if self.num_procs-1 == self.id_process:
                     print(f"\rProcessing wav {i}/{len(fnames) >> 1}", end="")
@@ -244,6 +241,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                                     target_sr=self.feat_inst.sample_rate)
                         # decorate speech
                         amp_sig = np.random.uniform(0.5, 2)
+                        audio = audio / (np.abs(audio).max() + 10**-5)
                         speech_raw = audio * amp_sig
 
                         stime = np.random.randint(
@@ -286,7 +284,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                                     min_amp=0.5,
                                     max_amp=0.95)
     
-                        if np.random.uniform(0,1) < 0.1:
+                        if np.random.uniform(0,1) < 0.25:
                             amp_n = np.random.uniform(0.0, 0.95)
                             speech0 = np.random.randn(len(speech0)) * amp_n * 0.01 # silence
                             target = 0
@@ -325,8 +323,8 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 if reverbing:
                      audio_sn = np.convolve(audio_sn, rir, 'same')
 
-                amp_sig = np.random.uniform(0.01, 0.95)
-                audio_sn = audio_sn / (np.abs(audio_sn).max() + 10**-5) * amp_sig
+                amp_sig = np.random.uniform(0.0, 0.025)
+                audio_sn = audio_sn / (np.abs(audio_sn).max() + 10**-5) * (gain - amp_sig)
 
                 # feature extraction of sig
                 spec_sn, _, feat_sn, pspec_sn = self.feat_inst.block_proc(audio_sn)
@@ -366,11 +364,11 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 if success:
                     if reverbing:
                         tfrecord = re.sub(  r'\.tfrecord$',
-                                            f'_{pt}_reverb.tfrecord',
+                                            f'_gain{int(gain*100)}_reverb.tfrecord',
                                             tfrecord)
                     else:
                         tfrecord = re.sub(  r'\.tfrecord$',
-                                            f'_{pt}.tfrecord',
+                                            f'_gain{int(gain*100)}.tfrecord',
                                             tfrecord)
                     os.makedirs(os.path.dirname(tfrecord), exist_ok=True)
                     try:
