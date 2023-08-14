@@ -222,16 +222,16 @@ def converter(  net_tf,
             file.write('#include "nn_speech.h"\n')
             file.write(f"extern const int16_t stft_win_coeff_w{PARAMS_AUDIO['win_size']}_h{PARAMS_AUDIO['hop']}[];\n") # pylint: disable=line-too-long
             file.write(f"PARAMS_NNSP params_nn{nn_id}_{nn_name} = {{\n")
-            file.write(f"\t.samplingRate = {PARAMS_AUDIO['sample_rate']},\n")
-            file.write(f"\t.fftsize = {PARAMS_AUDIO['len_fft']},\n")
-            file.write(f"\t.winsize_stft = {PARAMS_AUDIO['win_size']},\n")
-            file.write(f"\t.hopsize_stft = {PARAMS_AUDIO['hop']},\n")
-            file.write(f"\t.num_mfltrBank = {PARAMS_AUDIO['nfilters_mel']},\n")
-            file.write(f"\t.num_dnsmpl = {num_dnsampl},\n")
+            file.write(f"\t.samplingRate    = {PARAMS_AUDIO['sample_rate']},\n")
+            file.write(f"\t.fftsize         = {PARAMS_AUDIO['len_fft']},\n")
+            file.write(f"\t.winsize_stft    = {PARAMS_AUDIO['win_size']},\n")
+            file.write(f"\t.hopsize_stft    = {PARAMS_AUDIO['hop']},\n")
+            file.write(f"\t.num_mfltrBank   = {PARAMS_AUDIO['nfilters_mel']},\n")
+            file.write(f"\t.num_dnsmpl      = {num_dnsampl},\n")
             file.write(f"\t.pt_stft_win_coeff = stft_win_coeff_w{PARAMS_AUDIO['win_size']}_h{PARAMS_AUDIO['hop']},\n") # pylint: disable=line-too-long
             file.write("\t.start_bin = 0,\n")
-            file.write("\t.is_dcrm = 1,\n")
-            file.write("\t.pre_gain_q8 = 3840, // q8\n")
+            file.write("\t.is_dcrm = 0,\n")
+            file.write("\t.pre_gain_q1 = 10 << 1, // q1\n")
             file.write('};\n')
 
             #-----------------stats---------------------------------
@@ -483,17 +483,17 @@ if __name__ == "__main__":
     argparser.add_argument(
         '-a',
         '--nn_arch',
-        default='nn_arch/def_se_nn_arch72_mel',
+        default='nn_arch/def_esc_nn_arch',
         help='nn architecture')
 
     argparser.add_argument(
         '--epoch_loaded',
-        default= 50,
+        default= 2754,
         help='starting epoch')
 
     argparser.add_argument(
         '--net_id',
-        default= 3,
+        default= 5,
         help='starting epoch')
 
     argparser.add_argument(
@@ -504,7 +504,7 @@ if __name__ == "__main__":
 
     argparser.add_argument(
         '--net_name',
-        default= 'se1',
+        default= 'esc',
         help='starting epoch')
 
     main(argparser.parse_args())

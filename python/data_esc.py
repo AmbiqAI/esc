@@ -40,7 +40,7 @@ if UPLOAD_TFRECORD_S3:
 S3_BUCKET = "ambiqai-speech-commands-dataset"
 S3_PREFIX = "tfrecords"
 if DEBUG:
-    SNR_DBS = [ -6, -3, 0, 3, 6, 9, 12, 15]
+    SNR_DBS = [ 100]
 else:
     SNR_DBS = [ 6, 9, 12, 15]
 
@@ -181,7 +181,6 @@ class FeatMultiProcsClass(multiprocessing.Process):
         """
         convert np array to tfrecord
         """
-        MAX_LEN_SP = 25 * 16000
         for pt in range(4):
             random.shuffle(fnames)
             random.shuffle(self.wavs_sp)
@@ -228,7 +227,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                         audio, sample_rate = sf.read(wavpath)
                     except :# pylint: disable=bare-except
                         success = 0
-                        logging.debug("Reading the %s fails ", wavpath)
+                        print(f"Reading the {wavpath} fails ")
                     else:
                         audio = audio[stime:etime]
 
@@ -250,14 +249,15 @@ class FeatMultiProcsClass(multiprocessing.Process):
                         stime = np.random.randint(
                             int(self.feat_inst.sample_rate * 1.0),
                             self.feat_inst.sample_rate * 3)
-
+                        if k == 0:
+                            pp = np.random.uniform(0, 1)
+                            if pp < 0.25:
+                                stime = 1
                         zeros_s = filler[start_filler:stime+start_filler]
                         start_filler+=stime
-
                         size_zeros = np.random.randint(
                             int(self.feat_inst.sample_rate * 1.0),
                             self.feat_inst.sample_rate * 3)
-
                         zeros_e = filler[start_filler:start_filler+size_zeros]
                         start_filler+=size_zeros
                         etime = len(speech_raw) + stime
@@ -285,7 +285,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                                     rir=None,
                                     min_amp=0.5,
                                     max_amp=0.95)
-
+    
                         if np.random.uniform(0,1) < 0.1:
                             amp_n = np.random.uniform(0.0, 0.95)
                             speech0 = np.random.randn(len(speech0)) * amp_n * 0.01 # silence
@@ -297,6 +297,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
 
                 stimes  = np.array(stimes)
                 etimes  = np.array(etimes)
+                
                 targets = np.array(targets).astype(np.int32)
                 start_frames    = (stimes / self.params_audio_def['hop']) + 1 # target level frame
                 start_frames    = start_frames.astype(np.int32)
@@ -324,7 +325,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 if reverbing:
                      audio_sn = np.convolve(audio_sn, rir, 'same')
 
-                amp_sig = np.random.uniform(0.1, 0.95)
+                amp_sig = np.random.uniform(0.01, 0.95)
                 audio_sn = audio_sn / (np.abs(audio_sn).max() + 10**-5) * amp_sig
 
                 # feature extraction of sig
@@ -333,13 +334,13 @@ class FeatMultiProcsClass(multiprocessing.Process):
                 if DEBUG:
                     if reverbing:
                         print('has reverb')
+                    
                     sd.play(
                         audio_sn,
                         self.feat_inst.sample_rate)
                     print(fnames[2*i])
                     print(fnames[2*i + 1])
                     print(start_frames)
-                    print(f"{TARGETS[targets[0]]}, {TARGETS[targets[1]]}")
                     flabel = np.zeros(spec_sn.shape[0])
                     for start_frame, end_frame, target in zip(start_frames, end_frames, targets):
                         flabel[start_frame: end_frame] = target
@@ -349,7 +350,8 @@ class FeatMultiProcsClass(multiprocessing.Process):
                         audio_sn, spec_sn.T, feat_sn.T,
                         self.feat_inst.sample_rate,
                         start_frames, end_frames, targets)
-
+                    print(f"{TARGETS[targets[0]]}, {TARGETS[targets[1]]}")
+                    
                     os.makedirs('test_wavs', exist_ok=True)
                     sf.write(f'test_wavs/speech_{self.cnt}.wav',
                              audio_sn,
