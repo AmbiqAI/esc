@@ -20,7 +20,8 @@ import c_code_table_converter
 DIM_TARGET = 5
 physical_devices = tf.config.list_physical_devices('GPU')
 WEIGHTS=np.ones(DIM_TARGET, dtype=np.float32)
-
+WEIGHTS[1] = 2
+WEIGHTS[4] = 3
 try:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 except: # pylint: disable=bare-except
@@ -388,14 +389,14 @@ def main(args):
 
         plt.figure(1)
         ax_handle = plt.subplot(2,1,1)
-        ax_handle.plot(loss['train'][0: epoch])
-        ax_handle.plot(loss['test'][0: epoch])
+        ax_handle.plot(loss['train'][: epoch])
+        ax_handle.plot(loss['test'][: epoch])
         ax_handle.legend(['train', 'test'])
         ax_handle.grid(True)
 
         ax_handle = plt.subplot(2,1,2)
-        ax_handle.plot(acc['train'][0: epoch])
-        ax_handle.plot(acc['test'][0: epoch])
+        ax_handle.plot(acc['train'][: epoch])
+        ax_handle.plot(acc['test'][: epoch])
         ax_handle.legend(['train', 'test'])
         ax_handle.grid(True)
         ax_handle.set_xlabel('Epochs')
