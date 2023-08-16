@@ -40,9 +40,9 @@ if UPLOAD_TFRECORD_S3:
 S3_BUCKET = "ambiqai-speech-commands-dataset"
 S3_PREFIX = "tfrecords"
 if DEBUG:
-    SNR_DBS = [ 100]
+    SNR_DBS = [ 6]
 else:
-    SNR_DBS = [ 6, 9, 12, 15]
+    SNR_DBS = [3, 6, 9, 12, 15, 30]
 
 NTYPES = [
     'ESC-50-MASTER',
@@ -181,219 +181,236 @@ class FeatMultiProcsClass(multiprocessing.Process):
         """
         convert np array to tfrecord
         """
-        GAINS=np.arange(0, 1.0, 0.05)+0.01
-        for i_gain in range(len(GAINS)-1):
-            random.shuffle(fnames)
-            random.shuffle(self.wavs_sp)
-            random.shuffle(self.wavs_noise)
-            reverbing=True
-            for i in range(len(fnames) >> 1):
-                if self.num_procs-1 == self.id_process:
-                    print(f"\rProcessing wav {i}/{len(fnames) >> 1}", end="")
-                success = 1
-                stimes = []
-                etimes = []
-                targets = []
-                speech = np.empty(0)
-                len_sp_last = 0
-                pattern = r'(\.wav$|\.flac$)'
+        GAINS=np.arange(0, 1.0, 0.05) + 0.01
+        for r in range(2):
+            if r == 0:
+                reverbing = False
+            else:
+                reverbing = True
+            for i_gain in range(len(GAINS)-1):
+                random.shuffle(fnames)
+                random.shuffle(self.wavs_sp)
+                random.shuffle(self.wavs_noise)
+                reverbing=True
+                for i in range(len(fnames) >> 1):
+                    if self.num_procs-1 == self.id_process:
+                        print(f"\rProcessing wav {i}/{len(fnames) >> 1}", end="")
+                    success = 1
+                    stimes = []
+                    etimes = []
+                    targets = []
+                    speech = np.empty(0)
+                    len_sp_last = 0
+                    pattern = r'(\.wav$|\.flac$)'
 
-                # read filler noise
-                noise = self.audio_load(
-                    self.wavs_noise[i % len(self.wavs_noise)],
-                    self.feat_inst.sample_rate)
-
-                noise = self.audio_rep_len(
-                            noise,
-                            self.feat_inst.sample_rate * 12)
-                amp_sig = np.random.uniform(0.1, 0.95)
-                filler = noise * amp_sig
-                if np.random.uniform(0, 1) < 0.1:
-                    amp_n = np.random.uniform(0.0, 0.95)
-                    filler = np.random.randn(len(filler)) * amp_n * 0.01
-
-                start_filler = 0
-                for k in range(2):
-                    fname = fnames[2*i+k]
-                    wavpath, stime, etime, target_name = fname.strip().split(',')
-                    stime = int(stime)
-                    etime = int(etime)
-                    target = TARGETS.index(target_name)
-                    if k == 0:
-                        tfrecord = re.sub(pattern, '.tfrecord', re.sub(r'wavs', S3_PREFIX, wavpath))
-                    try:
-                        audio, sample_rate = sf.read(wavpath)
-                    except :# pylint: disable=bare-except
-                        success = 0
-                        print(f"Reading the {wavpath} fails ")
-                    else:
-                        audio = audio[stime:etime]
-
-                        if audio.ndim > 1:
-                            audio=audio[:,0]
-
-                        if len(audio) > 6 * sample_rate:
-                            audio = audio[:6 * sample_rate]
-
-                        if sample_rate > self.feat_inst.sample_rate:
-                            audio = librosa.resample(
-                                    audio,
-                                    orig_sr=sample_rate,
-                                    target_sr=self.feat_inst.sample_rate)
-                        # decorate speech
-                        amp_sig = np.random.uniform(0.5, 2)
-                        audio = audio / (np.abs(audio).max() + 10**-5)
-                        speech_raw = audio * amp_sig
-
-                        stime = np.random.randint(
-                            int(self.feat_inst.sample_rate * 1.0),
-                            self.feat_inst.sample_rate * 3)
+                    start_filler = 0
+                    for k in range(2):
+                        fname = fnames[2*i+k]
+                        wavpath, stime, etime, target_name = fname.strip().split(',')
+                        stime = int(stime)
+                        etime = int(etime)
+                        target = TARGETS.index(target_name)
                         if k == 0:
-                            pp = np.random.uniform(0, 1)
-                            if pp < 0.25:
-                                stime = 1
-                        zeros_s = filler[start_filler:stime+start_filler]
-                        start_filler+=stime
-                        size_zeros = np.random.randint(
-                            int(self.feat_inst.sample_rate * 1.0),
-                            self.feat_inst.sample_rate * 3)
-                        zeros_e = filler[start_filler:start_filler+size_zeros]
-                        start_filler+=size_zeros
-                        etime = len(speech_raw) + stime
-                        speech0 = np.concatenate((zeros_s, speech_raw, zeros_e))
-
-                        stime += FRAMES_TARGET_DELAY * self.feat_inst.hop
-                        etime += FRAMES_TARGET_DELAY * self.feat_inst.hop # delay 50 frames to label quiet
-                        stimes += [stime + len_sp_last]
-                        etimes += [etime + len_sp_last]
-
-                        if np.random.uniform(0, 1) < 0.5:
-                            # # read filler speech
-                            speech_filler = self.audio_load(
-                                self.wavs_sp[(2*i) % len(self.wavs_sp)],
-                                self.feat_inst.sample_rate)
-                            random.shuffle(SNR_DBS)
-                            speech_filler = self.audio_set_len(speech_filler, len(speech0))
-                            speech0, _ = add_noise.add_noise(
-                                    speech0,
-                                    speech_filler,
-                                    SNR_DBS[0],
-                                    stime=0, etime=len(speech0),
-                                    return_all=True,
-                                    snr_dB_improved = None,
-                                    rir=None,
-                                    min_amp=0.5,
-                                    max_amp=0.95)
-    
-                        if np.random.uniform(0,1) < 0.25:
-                            amp_n = np.random.uniform(0.0, 0.95)
-                            speech0 = np.random.randn(len(speech0)) * amp_n * 0.01 # silence
-                            target = 0
-                        targets += [target]
-                        speech = np.concatenate((speech, speech0))
-
-                        len_sp_last += len(speech)
-
-                stimes  = np.array(stimes)
-                etimes  = np.array(etimes)
-                
-                targets = np.array(targets).astype(np.int32)
-                start_frames    = (stimes / self.params_audio_def['hop']) + 1 # target level frame
-                start_frames    = start_frames.astype(np.int32)
-                end_frames      = (etimes / self.params_audio_def['hop']) + 1 # target level frame
-                end_frames      = end_frames.astype(np.int32)
-                # add noise to sig
-                rir = None
-
-                if self.reverb_lst:
-                    idx = np.random.randint(0, len(self.reverb_lst))
-
-                    rir, sample_rate_rir = sf.read(self.reverb_lst[idx])
-
-                    if rir.ndim > 1:
-                        rir = rir[:,0]
-                    if sample_rate_rir > self.feat_inst.sample_rate:
-                        rir = librosa.resample(
-                                rir,
-                                orig_sr=sample_rate_rir,
-                                target_sr=self.feat_inst.sample_rate)
-                    rir = rir[:np.minimum(3000, rir.size)]
-                # add reverb
-                # speech = dc_remove(speech)
-                audio_sn = speech
-                if reverbing:
-                     audio_sn = np.convolve(audio_sn, rir, 'same')
-
-                amp_sig = np.random.uniform(GAINS[i_gain], GAINS[i_gain+1])
-                audio_sn = audio_sn / (np.abs(audio_sn).max() + 10**-5) * amp_sig
-
-                # feature extraction of sig
-                spec_sn, _, feat_sn, pspec_sn = self.feat_inst.block_proc(audio_sn)
-
-                if DEBUG:
-                    if reverbing:
-                        print('has reverb')
-                    
-                    sd.play(
-                        audio_sn,
-                        self.feat_inst.sample_rate)
-                    print(fnames[2*i])
-                    print(fnames[2*i + 1])
-                    print(start_frames)
-                    flabel = np.zeros(spec_sn.shape[0])
-                    for start_frame, end_frame, target in zip(start_frames, end_frames, targets):
-                        flabel[start_frame: end_frame] = target
-
-                    display_stft_all(
-                        audio_sn, spec_sn.T, feat_sn.T,
-                        audio_sn, spec_sn.T, feat_sn.T,
-                        self.feat_inst.sample_rate,
-                        start_frames, end_frames, targets)
-                    print(f"{TARGETS[targets[0]]}, {TARGETS[targets[1]]}")
-                    
-                    os.makedirs('test_wavs', exist_ok=True)
-                    sf.write(f'test_wavs/speech_{self.cnt}.wav',
-                             audio_sn,
-                             self.feat_inst.sample_rate)
-
-                    sf.write(f'test_wavs/speech_{self.cnt}_ref.wav',
-                             speech,
-                             self.feat_inst.sample_rate)
-
-                    self.cnt = self.cnt + 1
-
-                if success:
-                    if reverbing:
-                        tfrecord = re.sub(  r'\.tfrecord$',
-                                            f'_gain{int(i_gain)}_reverb.tfrecord',
-                                            tfrecord)
-                    else:
-                        tfrecord = re.sub(  r'\.tfrecord$',
-                                            f'_gain{int(i_gain)}.tfrecord',
-                                            tfrecord)
-                    os.makedirs(os.path.dirname(tfrecord), exist_ok=True)
-                    try:
-                        timesteps, _  = feat_sn.shape
-                        width_targets = end_frames - start_frames + 1
-                        if not DEBUG:
-                            tfrecord_converter_esc.make_tfrecord( # pylint: disable=too-many-function-args
-                                                tfrecord,
-                                                feat_sn,
-                                                targets,
-                                                timesteps,
-                                                start_frames,
-                                                width_targets)
-
-                    except: # pylint: disable=bare-except
-                        print(f"Thread-{id_process}: {i}, processing {tfrecord} failed")
-                    else:
-                        self.success_dict[self.id_process] += [tfrecord]
-                        # since tfrecord file starts: data/tfrecords/speakers/...
-                        # strip the leading "data/" when uploading
-                        if UPLOAD_TFRECORD_S3:
-                            s3.upload_file(tfrecord, S3_BUCKET, tfrecord)
+                            tfrecord = re.sub(pattern, '.tfrecord', re.sub(r'wavs', S3_PREFIX, wavpath))
+                        try:
+                            audio, sample_rate = sf.read(wavpath)
+                        except :# pylint: disable=bare-except
+                            success = 0
+                            print(f"Reading the {wavpath} fails ")
                         else:
-                            pass
+                            audio = audio[stime:etime]
+
+                            if audio.ndim > 1:
+                                audio=audio[:,0]
+
+                            if len(audio) > 6 * sample_rate:
+                                audio = audio[:6 * sample_rate]
+
+                            if sample_rate > self.feat_inst.sample_rate:
+                                audio = librosa.resample(
+                                        audio,
+                                        orig_sr=sample_rate,
+                                        target_sr=self.feat_inst.sample_rate)
+                            # decorate speech
+                            amp_sig = np.random.uniform(0.5, 2)
+                            audio = audio / (np.abs(audio).max() + 10**-5)
+                            speech_raw = audio * amp_sig
+
+                            stime = np.random.randint(
+                                int(self.feat_inst.sample_rate * 1.0),
+                                self.feat_inst.sample_rate * 3)
+                            if k == 0:
+                                pp = np.random.uniform(0, 1)
+                                if pp < 0.25:
+                                    stime = 1
+                            zeros_s = np.zeros(stime)
+
+                            size_zeros = np.random.randint(
+                                int(self.feat_inst.sample_rate * 1.0),
+                                self.feat_inst.sample_rate * 3)
+
+                            zeros_e = np.zeros(size_zeros)
+                            etime = len(speech_raw) + stime
+                            speech0 = np.concatenate((zeros_s, speech_raw, zeros_e))
+
+                            # read filler noise
+                            noise = self.audio_load(
+                                self.wavs_noise[(2*i+k) % len(self.wavs_noise)],
+                                self.feat_inst.sample_rate)
+
+                            noise = self.audio_rep_len(
+                                        noise,
+                                        self.feat_inst.sample_rate * 12)
+                            amp_sig = np.random.uniform(0.1, 0.95)
+                            filler = noise * amp_sig
+                            if np.random.uniform(0, 1) < 0.1:
+                                amp_n = np.random.uniform(0.0, 0.95)
+                                filler = np.random.randn(len(filler)) * amp_n * 0.01
+                            noise_filler = self.audio_set_len(filler, len(speech0))
+                            random.shuffle(SNR_DBS)
+                            speech0, _ = add_noise.add_noise(
+                                        speech0,
+                                        noise_filler,
+                                        SNR_DBS[0],
+                                        stime=0, etime=len(speech0),
+                                        return_all=True,
+                                        snr_dB_improved = None,
+                                        rir=None,
+                                        min_amp=0.5,
+                                        max_amp=0.95)
+    
+                            stime += FRAMES_TARGET_DELAY * self.feat_inst.hop
+                            etime += FRAMES_TARGET_DELAY * self.feat_inst.hop # delay 50 frames to label quiet
+                            stimes += [stime + len_sp_last]
+                            etimes += [etime + len_sp_last]
+
+                            if np.random.uniform(0, 1) < 0.5:
+                                # # read filler speech
+                                speech_filler = self.audio_load(
+                                    self.wavs_sp[(2*i+k) % len(self.wavs_sp)],
+                                    self.feat_inst.sample_rate)
+                                random.shuffle(SNR_DBS)
+                                speech_filler = self.audio_set_len(speech_filler, len(speech0))
+                                speech0, _ = add_noise.add_noise(
+                                        speech0,
+                                        speech_filler,
+                                        SNR_DBS[0],
+                                        stime=0, etime=len(speech0),
+                                        return_all=True,
+                                        snr_dB_improved = None,
+                                        rir=None,
+                                        min_amp=0.5,
+                                        max_amp=0.95)
+        
+                            if np.random.uniform(0,1) < 0.25:
+                                amp_n = np.random.uniform(0.0, 0.95)
+                                speech0 = np.random.randn(len(speech0)) * amp_n * 0.01 # silence
+                                target = 0
+                            targets += [target]
+                            speech = np.concatenate((speech, speech0))
+
+                            len_sp_last += len(speech)
+
+                    stimes  = np.array(stimes)
+                    etimes  = np.array(etimes)
+                    
+                    targets = np.array(targets).astype(np.int32)
+                    start_frames    = (stimes / self.params_audio_def['hop']) + 1 # target level frame
+                    start_frames    = start_frames.astype(np.int32)
+                    end_frames      = (etimes / self.params_audio_def['hop']) + 1 # target level frame
+                    end_frames      = end_frames.astype(np.int32)
+                    # add noise to sig
+                    rir = None
+
+                    if self.reverb_lst:
+                        idx = np.random.randint(0, len(self.reverb_lst))
+
+                        rir, sample_rate_rir = sf.read(self.reverb_lst[idx])
+
+                        if rir.ndim > 1:
+                            rir = rir[:,0]
+                        if sample_rate_rir > self.feat_inst.sample_rate:
+                            rir = librosa.resample(
+                                    rir,
+                                    orig_sr=sample_rate_rir,
+                                    target_sr=self.feat_inst.sample_rate)
+                        rir = rir[:np.minimum(3000, rir.size)]
+                    # add reverb
+                    # speech = dc_remove(speech)
+                    audio_sn = speech
+                    if reverbing:
+                        audio_sn = np.convolve(audio_sn, rir, 'same')
+
+                    amp_sig = np.random.uniform(GAINS[i_gain], GAINS[i_gain+1])
+                    audio_sn = audio_sn / (np.abs(audio_sn).max() + 10**-5) * amp_sig
+
+                    # feature extraction of sig
+                    spec_sn, _, feat_sn, pspec_sn = self.feat_inst.block_proc(audio_sn)
+
+                    if DEBUG:
+                        if reverbing:
+                            print('has reverb')
+                        
+                        sd.play(
+                            audio_sn,
+                            self.feat_inst.sample_rate)
+                        print(fnames[2*i])
+                        print(fnames[2*i + 1])
+                        print(start_frames)
+                        flabel = np.zeros(spec_sn.shape[0])
+                        for start_frame, end_frame, target in zip(start_frames, end_frames, targets):
+                            flabel[start_frame: end_frame] = target
+
+                        display_stft_all(
+                            audio_sn, spec_sn.T, feat_sn.T,
+                            audio_sn, spec_sn.T, feat_sn.T,
+                            self.feat_inst.sample_rate,
+                            start_frames, end_frames, targets)
+                        print(f"{TARGETS[targets[0]]}, {TARGETS[targets[1]]}")
+                        
+                        os.makedirs('test_wavs', exist_ok=True)
+                        sf.write(f'test_wavs/speech_{self.cnt}.wav',
+                                audio_sn,
+                                self.feat_inst.sample_rate)
+
+                        sf.write(f'test_wavs/speech_{self.cnt}_ref.wav',
+                                speech,
+                                self.feat_inst.sample_rate)
+
+                        self.cnt = self.cnt + 1
+
+                    if success:
+                        if reverbing:
+                            tfrecord = re.sub(  r'\.tfrecord$',
+                                                f'_gain{int(i_gain)}_reverb.tfrecord',
+                                                tfrecord)
+                        else:
+                            tfrecord = re.sub(  r'\.tfrecord$',
+                                                f'_gain{int(i_gain)}.tfrecord',
+                                                tfrecord)
+                        os.makedirs(os.path.dirname(tfrecord), exist_ok=True)
+                        try:
+                            timesteps, _  = feat_sn.shape
+                            width_targets = end_frames - start_frames + 1
+                            if not DEBUG:
+                                tfrecord_converter_esc.make_tfrecord( # pylint: disable=too-many-function-args
+                                                    tfrecord,
+                                                    feat_sn,
+                                                    targets,
+                                                    timesteps,
+                                                    start_frames,
+                                                    width_targets)
+
+                        except: # pylint: disable=bare-except
+                            print(f"Thread-{id_process}: {i}, processing {tfrecord} failed")
+                        else:
+                            self.success_dict[self.id_process] += [tfrecord]
+                            # since tfrecord file starts: data/tfrecords/speakers/...
+                            # strip the leading "data/" when uploading
+                            if UPLOAD_TFRECORD_S3:
+                                s3.upload_file(tfrecord, S3_BUCKET, tfrecord)
+                            else:
+                                pass
 def parse_wavs(files_sp, start=1):
     wavs_sp = {"train": [], "test": []}
     for file_sp in files_sp:

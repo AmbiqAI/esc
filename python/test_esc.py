@@ -15,7 +15,7 @@ from nnsp_pack.pyaudio_animation import AudioShowClass
 from nnsp_pack.nn_infer import NNInferClass
 from nnsp_pack.stft_module import stft_class
 from nnsp_pack.basic_dsp import dc_remove
-from data_esc import params_audio as PARAM_AUDIO
+from data_esc_nonoverlap import params_audio as PARAM_AUDIO
 
 SHOW_HISTOGRAM  = False
 NP_INFERENCE    = False

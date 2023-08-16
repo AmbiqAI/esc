@@ -28,7 +28,7 @@ except: # pylint: disable=bare-except
     pass
 
 SHOW_STEPS          = True
-DISPLAY_HISTOGRAM   = True
+DISPLAY_HISTOGRAM   = False
 
 @tf.function
 def train_kernel(   feat, mask, target, states, net,
@@ -370,8 +370,8 @@ def main(args):
         with open(os.path.join(folder_nn, 'nn_acc.pkl'), "wb") as file:
             pickle.dump(acc, file)
 
-        print(f"(train) max acc epoch = {np.argmax(acc['train'])}")
-        print(f"(test)  max acc epoch = {np.argmax(acc['test'])}")
+        print(f"(train) max acc epoch = {np.argmax(acc['train'][: epoch+1])}")
+        print(f"(test)  max acc epoch = {np.argmax(acc['test'][: epoch+1])}")
         tf.print('Epoch spent ', tf_round(tf.timestamp() - t_start), ' seconds')
 
         plt.figure(2)
@@ -389,14 +389,14 @@ def main(args):
 
         plt.figure(1)
         ax_handle = plt.subplot(2,1,1)
-        ax_handle.plot(loss['train'][: epoch])
-        ax_handle.plot(loss['test'][: epoch])
+        ax_handle.plot(loss['train'][: epoch+1])
+        ax_handle.plot(loss['test'][: epoch+1])
         ax_handle.legend(['train', 'test'])
         ax_handle.grid(True)
 
         ax_handle = plt.subplot(2,1,2)
-        ax_handle.plot(acc['train'][: epoch])
-        ax_handle.plot(acc['test'][: epoch])
+        ax_handle.plot(acc['train'][: epoch+1])
+        ax_handle.plot(acc['test'][: epoch+1])
         ax_handle.legend(['train', 'test'])
         ax_handle.grid(True)
         ax_handle.set_xlabel('Epochs')

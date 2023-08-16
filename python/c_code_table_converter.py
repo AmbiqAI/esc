@@ -11,7 +11,7 @@ from nnsp_pack import c_weight_man
 from nnsp_pack.nn_module import NeuralNetClass
 from nnsp_pack.load_nn_arch import load_nn_arch, setup_nn_folder
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-from data_esc import params_audio as PARAMS_AUDIO
+from data_esc_nonoverlap import params_audio as PARAMS_AUDIO
 # PARAMS_AUDIO = {
 #     'win_size'      : 480,
 #     'hop'           : 160,
@@ -488,7 +488,7 @@ if __name__ == "__main__":
 
     argparser.add_argument(
         '--epoch_loaded',
-        default= 1000,
+        default= 766,
         help='starting epoch')
 
     argparser.add_argument(
