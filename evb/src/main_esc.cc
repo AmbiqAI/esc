@@ -261,8 +261,8 @@ int main(void) {
                         esc_output[i] = detected << 11;
                     }
                     esc_output[0] = detected;
-                    if (detected)
-                        escCntrlClass_reset(&cntrl_inst);
+                    // if (detected)
+                    //     escCntrlClass_reset(&cntrl_inst);
 #ifdef DEF_GUI_ENABLE
                     ns_rpc_data_sendBlockToPC(&pcmBlock);
                     ns_rpc_data_computeOnPC(&computeBlock, &IsRecordBlock);
