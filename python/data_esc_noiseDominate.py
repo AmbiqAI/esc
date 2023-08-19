@@ -185,8 +185,14 @@ class FeatMultiProcsClass(multiprocessing.Process):
         random.shuffle(fnames)
         random.shuffle(self.wavs_sp)
         random.shuffle(self.wavs_noise)
-        reverbing=True
+
         for i in range(len(self.wavs_noise) >> 1):
+            pp = np.random.uniform(0,1)
+            if pp < 0.25:
+                reverbing=True
+            else:
+                reverbing=False
+
             if self.num_procs-1 == self.id_process:
                 print(f"\rProcessing wav {i}/{len(self.wavs_noise) >> 1}", end="")
             success = 1
@@ -323,8 +329,6 @@ class FeatMultiProcsClass(multiprocessing.Process):
             end_frames      = (etimes / self.params_audio_def['hop']) + 1 # target level frame
             end_frames      = end_frames.astype(np.int32)
             # add noise to sig
-            rir = None
-
             if self.reverb_lst:
                 idx = np.random.randint(0, len(self.reverb_lst))
 
