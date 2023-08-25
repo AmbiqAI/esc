@@ -19,7 +19,7 @@ from nnsp_pack import tfrecord_converter_esc
 from nnsp_pack.feature_module import FeatureClass, display_stft_all
 from nnsp_pack import add_noise
 from nnsp_pack import boto3_op
-from nnsp_pack.se_download import se_download
+from nnsp_pack.esc_download import esc_download
 from nnsp_pack.basic_dsp import dc_remove
 import matplotlib.pyplot as plt
 
@@ -211,7 +211,10 @@ class FeatMultiProcsClass(multiprocessing.Process):
                         etime = int(etime)
                         target = TARGETS.index(target_name)
                         if k == 0:
-                            tfrecord = re.sub(pattern, '.tfrecord', re.sub(r'wavs', S3_PREFIX, wavpath))
+                            tfrecord = re.sub(
+                                pattern,
+                                '.tfrecord',
+                                re.sub(r'wavs', S3_PREFIX, wavpath))
                         try:
                             audio, sample_rate = sf.read(wavpath)
                         except :# pylint: disable=bare-except
@@ -278,7 +281,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                                         rir=None,
                                         min_amp=0.5,
                                         max_amp=0.95)
-    
+
                             stime += FRAMES_TARGET_DELAY * self.feat_inst.hop
                             etime += FRAMES_TARGET_DELAY * self.feat_inst.hop # delay 50 frames to label quiet
                             stimes += [stime + len_sp_last]
@@ -301,7 +304,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
                                         rir=None,
                                         min_amp=0.5,
                                         max_amp=0.95)
-        
+
                             if np.random.uniform(0,1) < 0.25:
                                 amp_n = np.random.uniform(0.0, 0.95)
                                 speech0 = np.random.randn(len(speech0)) * amp_n * 0.01 # silence
@@ -313,7 +316,7 @@ class FeatMultiProcsClass(multiprocessing.Process):
 
                     stimes  = np.array(stimes)
                     etimes  = np.array(etimes)
-                    
+
                     targets = np.array(targets).astype(np.int32)
                     start_frames    = (stimes / self.params_audio_def['hop']) + 1 # target level frame
                     start_frames    = start_frames.astype(np.int32)
@@ -431,7 +434,7 @@ def main(args):
     datasize_noise = args.datasize_noise
     reverb_prob = args.reverb_prob
     if download:
-        se_download()
+        esc_download()
 
     if DOWLOAD_DATA:
         s3 = download_data()

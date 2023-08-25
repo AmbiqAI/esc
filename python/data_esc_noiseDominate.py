@@ -19,7 +19,7 @@ from nnsp_pack import tfrecord_converter_esc
 from nnsp_pack.feature_module import FeatureClass, display_stft_all
 from nnsp_pack import add_noise
 from nnsp_pack import boto3_op
-from nnsp_pack.se_download import se_download
+from nnsp_pack.esc_download import esc_download
 from nnsp_pack.basic_dsp import dc_remove
 import matplotlib.pyplot as plt
 
@@ -438,7 +438,7 @@ def main(args):
     datasize_noise = args.datasize_noise
     reverb_prob = args.reverb_prob
     if download:
-        se_download()
+        esc_download()
 
     if DOWLOAD_DATA:
         s3 = download_data()

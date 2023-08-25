@@ -7,12 +7,31 @@ import tarfile
 from zipfile import ZipFile
 import requests
 
-def se_download():
+def esc_download():
     """
     download se dataset
     """
     wavs = "wavs"
     os.makedirs(wavs, exist_ok=True)
+
+    # UrbanSound8K
+    target_name = 'UrbanSound8K.tar.gz'
+    dst_folder = f'./{wavs}/noise/'
+    url = f'https://zenodo.org/record/1203745/files/{target_name}'
+    response = requests.get(url, stream=True)
+    print(f"Downloading {url}")
+    if response.status_code == 200:
+        with open(f"{wavs}/{target_name}", 'wb') as file:
+            file.write(response.raw.read())
+    print(f"extract {target_name}")
+    with tarfile.open(f"{wavs}/{target_name}") as file:
+        file.extractall(dst_folder)
+
+    # Infants_Cry_Sound dataset
+    target_name = 'archive.zip'
+    dst_folder = f'./{wavs}/noise/Infants_Cry_Sound'
+    url = f'https://github.com/gveres/donateacry-corpus.git'
+    os.system(f"git clone {url} {dst_folder}")
 
     # LibriSpeech 360hr
     target_name = 'train-clean-360.tar.gz'
@@ -99,22 +118,22 @@ def se_download():
     with ZipFile(f"{wavs}/{target_name}", 'r') as file:
         file.extractall(dst_folder)
 
-    # fsd50_lst = [
-    #     "FSD50K.dev_audio.z01",
-    #     "FSD50K.dev_audio.z02",
-    #     "FSD50K.dev_audio.z03",
-    #     "FSD50K.dev_audio.z04",
-    #     "FSD50K.dev_audio.z05",
-    #     "FSD50K.dev_audio.zip",
-    # ]
+    fsd50_lst = [
+        "FSD50K.dev_audio.z01",
+        "FSD50K.dev_audio.z02",
+        "FSD50K.dev_audio.z03",
+        "FSD50K.dev_audio.z04",
+        "FSD50K.dev_audio.z05",
+        "FSD50K.dev_audio.zip",
+    ]
 
-    # for fname in fsd50_lst:
-    #     url = f'https://zenodo.org/record/4060432/files/{fname}?download=1"'
-    #     response = requests.get(url, stream=True)
-    #     print(f"Downloading {url}")
-    #     if response.status_code == 200:
-    #         with open(fname, 'wb') as f:
-    #             f.write(response.raw.read())
-    # os.system("zip -s 0 FSD50K.dev_audio.zip --out unsplit.zip")
+    for fname in fsd50_lst:
+        url = f'https://zenodo.org/record/4060432/files/{fname}?download=1"'
+        response = requests.get(url, stream=True)
+        print(f"Downloading {url}")
+        if response.status_code == 200:
+            with open(fname, 'wb') as f:
+                f.write(response.raw.read())
+    os.system("zip -s 0 FSD50K.dev_audio.zip --out unsplit.zip")
 if __name__ == "__main__":
-    se_download()
+    esc_download()

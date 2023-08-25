@@ -1,5 +1,10 @@
 # Environmental Sound Classification
-Environmental Sound Classification (ESC) is a noise classification based on recurrent neural networks (RNN). Total `five` classes are defined currently, including `unknown`, `dog_bark`, `gun_shot`, `siren_car_horn` and `baby_crying`.
+Environmental Sound Classification (ESC) is a noise classification based on recurrent neural networks (RNN). Total `five` classes are defined currently, including 
+- `unknown`
+- `dog_bark`
+- `gun_shot`
+- `siren_car_horn`
+- `baby_crying`.
 ## Directory contents
 ```py
 esc/ # root 
