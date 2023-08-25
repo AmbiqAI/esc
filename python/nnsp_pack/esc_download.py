@@ -28,7 +28,6 @@ def esc_download():
         file.extractall(dst_folder)
 
     # Infants_Cry_Sound dataset
-    target_name = 'archive.zip'
     dst_folder = f'./{wavs}/noise/Infants_Cry_Sound'
     url = f'https://github.com/gveres/donateacry-corpus.git'
     os.system(f"git clone {url} {dst_folder}")

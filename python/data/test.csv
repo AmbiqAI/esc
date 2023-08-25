@@ -1,540 +1,379 @@
-wavs/noise/UrbanSound8K/audio/fold4/74723-3-0-0.wav,3556,151149,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/27217-3-0-6.wav,711,160040,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/184575-3-0-1.wav,711,89978,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/125791-3-0-9.wav,0,136212,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/193394-3-0-7.wav,13161,332129,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/174994-3-0-1.wav,3201,119497,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/18581-3-1-3.wav,22194,127226,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/72261-3-0-27.wav,107049,174977,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/49808-3-0-6.wav,113451,167153,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/125791-3-0-12.wav,3912,174622,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/55013-3-0-1.wav,14226,174977,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/128470-3-0-1.wav,62594,170354,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/155317-3-0-0.wav,533,43300,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/52077-3-0-8.wav,7824,163597,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/33641-3-9-0.wav,2365,28318,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/85362-3-3-0.wav,711,171421,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/72537-3-0-6.wav,15382,42766,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/22347-3-3-0.wav,22050,173555,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/105088-3-0-19.wav,45523,88200,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/33849-3-4-0.wav,1344,79148,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/161923-3-0-19.wav,53347,175333,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/85662-3-0-0.wav,7860,45520,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/107190-3-0-0.wav,1616,30906,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/7383-3-0-0.wav,356,155773,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/116485-3-0-4.wav,27029,104560,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/63261-3-0-0.wav,4623,169998,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/68389-3-2-0.wav,626,60368,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/114587-3-0-5.wav,8129,190839,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/52077-3-0-3.wav,5690,165731,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/197073-3-4-3.wav,20129,377032,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/161922-3-1-5.wav,93535,167865,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/157322-3-0-5.wav,106065,320516,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/180256-3-0-1.wav,54194,168000,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/72537-3-0-2.wav,5512,33875,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/30226-3-1-5.wav,3912,169998,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/208030-3-2-0.wav,3439,46921,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/187378-3-0-19.wav,92823,161819,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/74513-3-0-3.wav,26673,169998,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/105088-3-0-8.wav,37343,100648,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/100795-3-1-1.wav,119,175333,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/189895-3-0-0.wav,41806,368516,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/174873-3-5-10.wav,58681,153283,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/52077-3-0-13.wav,98514,166798,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/69661-3-0-23.wav,1067,175333,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/191687-3-0-0.wav,3912,175689,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/110371-3-0-1.wav,56129,136645,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/82811-3-0-1.wav,111673,153283,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/59800-3-1-0.wav,6757,171777,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/7383-3-1-0.wav,1778,144036,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/37869-3-1-0.wav,9778,50522,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/109233-3-0-4.wav,30968,160258,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/62048-3-0-5.wav,18849,161107,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/65381-3-0-3.wav,35209,172132,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/159176-3-0-0.wav,839,40812,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/128470-3-0-8.wav,71485,175333,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/41918-3-0-0.wav,1067,164664,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/180052-3-0-1.wav,157161,357677,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/74723-3-0-2.wav,30230,172844,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/152588-3-2-0.wav,871,65506,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/180257-3-0-4.wav,54194,174968,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/196561-3-0-16.wav,774,191226,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/27216-3-0-21.wav,66506,144748,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/30226-3-1-1.wav,1067,174622,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/72829-3-0-1.wav,356,85888,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/174873-3-5-13.wav,77175,156484,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/207369-3-0-0.wav,1014,35222,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/197073-3-3-0.wav,1297,89871,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/112195-3-0-38.wav,44456,158262,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/97756-3-0-0.wav,409,43408,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/117271-3-0-2.wav,356,175689,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/102547-3-0-8.wav,86710,190839,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/74725-3-0-0.wav,711,166798,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/30344-3-0-0.wav,4623,174622,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/65381-3-0-6.wav,115229,174622,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/85362-3-1-0.wav,1778,172488,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/63932-3-1-1.wav,29874,113451,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/101415-3-0-2.wav,5032,189290,dog_bark
 wavs/noise/UrbanSound8K/audio/fold4/85544-3-5-0.wav,397,58948,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/72539-3-0-1.wav,2578,39654,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/34931-3-0-0.wav,1043,165826,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/209672-3-0-0.wav,13379,57977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/85544-3-6-0.wav,3484,123871,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/116485-3-0-4.wav,27029,104560,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/116400-3-1-2.wav,78953,144392,dog_bark
 wavs/noise/UrbanSound8K/audio/fold4/155320-3-0-0.wav,431,11375,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/128240-3-0-39.wav,92903,373161,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/180977-3-1-1.wav,2710,180387,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/85665-3-0-0.wav,5193,52899,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/33641-3-8-0.wav,3446,96494,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/173995-3-0-3.wav,17032,377806,dog_bark
 wavs/noise/UrbanSound8K/audio/fold2/179096-3-0-1.wav,19742,125806,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/52077-3-0-17.wav,43033,110961,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/191382-3-0-0.wav,6757,167509,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/30832-3-5-1.wav,14937,166798,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/175915-3-1-8.wav,61161,157548,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/49808-3-1-22.wav,65794,175333,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/196127-3-0-0.wav,0,186968,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/192236-3-0-8.wav,71226,357677,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/174994-3-0-0.wav,6402,144748,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/128470-3-0-1.wav,62594,170354,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/72538-3-0-1.wav,2312,30674,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/116484-3-0-12.wav,41255,121275,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/180256-3-0-2.wav,30968,189677,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/9031-3-3-0.wav,2302,72579,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/114587-3-0-4.wav,387,191613,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/55013-3-0-4.wav,61527,174977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/114587-3-0-7.wav,8129,164903,dog_bark
+wavs/noise/UrbanSound8K/audio/fold6/109233-3-0-3.wav,56129,190065,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/31323-3-0-20.wav,3912,173555,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/197080-3-0-6.wav,21677,200516,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/118587-3-0-6.wav,23473,81798,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/72537-3-0-2.wav,5512,33875,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/146343-3-0-0.wav,1423,141547,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/184725-3-0-1.wav,1161,191613,dog_bark
+wavs/noise/UrbanSound8K/audio/fold6/97392-3-0-0.wav,1970,115015,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/27216-3-0-18.wav,24895,172844,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/116483-3-1-0.wav,13515,140124,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/33641-3-1-0.wav,1765,87032,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/63292-3-0-0.wav,5335,163597,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/103076-3-1-0.wav,4967,38425,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/176258-3-1-13.wav,192000,363871,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/33849-3-4-0.wav,1344,79148,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/192236-3-0-2.wav,73548,349935,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/4918-3-4-0.wav,3681,31247,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/61077-3-0-0.wav,8066,53261,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/125791-3-0-9.wav,0,136212,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/173993-3-0-51.wav,2323,383226,dog_bark
+wavs/noise/UrbanSound8K/audio/fold6/109233-3-0-5.wav,27871,158710,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/63261-3-0-1.wav,6757,174266,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/77233-3-0-67.wav,11025,174622,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/7383-3-1-0.wav,1778,144036,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/69661-3-0-29.wav,356,172488,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/100652-3-0-3.wav,2490,174503,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/137803-3-0-1.wav,774,382452,dog_bark
 wavs/noise/UrbanSound8K/audio/fold1/180256-3-0-0.wav,19742,190839,dog_bark
-wavs/noise/UrbanSound8K/audio/fold5/180052-3-0-3.wav,51871,224516,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/201207-3-21-0.wav,2835,130955,dog_bark
-wavs/noise/UrbanSound8K/audio/fold7/157950-3-0-0.wav,2883,59298,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/118101-3-0-0.wav,2710,156774,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/197073-3-7-0.wav,3871,355355,dog_bark
-wavs/noise/UrbanSound8K/audio/fold8/31325-3-1-1.wav,38054,161819,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/204919-3-1-0.wav,6402,172132,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/101415-3-0-8.wav,774,191226,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/166489-3-0-2.wav,25935,188903,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/157695-3-0-27.wav,2845,171421,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/180052-3-0-1.wav,157161,357677,dog_bark
+wavs/noise/UrbanSound8K/audio/fold10/199261-3-0-2.wav,62710,360000,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/144028-3-1-1.wav,3484,186581,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/7383-3-0-0.wav,356,155773,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/116485-3-2-0.wav,11381,162885,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/207124-3-0-0.wav,1479,41241,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/9031-3-1-0.wav,185,16824,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/173995-3-0-11.wav,3097,329032,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/164312-3-4-0.wav,6910,69919,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/173993-3-0-39.wav,91355,380129,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/74513-3-0-6.wav,10669,168931,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/72261-3-0-27.wav,107049,174977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/116400-3-1-1.wav,711,50857,dog_bark
+wavs/noise/UrbanSound8K/audio/fold1/9031-3-2-0.wav,409,99485,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/52077-3-0-3.wav,5690,165731,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/37869-3-3-0.wav,3335,92793,dog_bark
+wavs/noise/UrbanSound8K/audio/fold2/72539-3-0-8.wav,10580,27562,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/58382-3-0-0.wav,2490,174266,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/157695-3-0-8.wav,27385,174977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/27216-3-0-21.wav,66506,144748,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/62048-3-0-4.wav,20627,158973,dog_bark
 wavs/noise/UrbanSound8K/audio/fold5/178497-3-0-4.wav,44516,140516,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/100652-3-0-1.wav,13159,173199,dog_bark
-wavs/noise/UrbanSound8K/audio/fold2/54545-3-0-2.wav,711,171421,dog_bark
-wavs/noise/UrbanSound8K/audio/fold9/187378-3-0-12.wav,62238,162885,dog_bark
-wavs/noise/UrbanSound8K/audio/fold10/11722-3-0-0.wav,2462,46325,dog_bark
-wavs/noise/UrbanSound8K/audio/fold6/109233-3-0-6.wav,18968,180774,dog_bark
-wavs/noise/UrbanSound8K/audio/fold1/9031-3-4-0.wav,3247,33208,dog_bark
-wavs/noise/UrbanSound8K/audio/fold3/200161-3-6-4.wav,47226,377032,dog_bark
-wavs/noise/UrbanSound8K/audio/fold4/135528-6-9-0.wav,545,47672,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/145612-6-1-0.wav,2929,65266,gun_shot
-wavs/noise/UrbanSound8K/audio/fold3/135526-6-13-0.wav,6183,22307,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/162432-6-2-0.wav,5136,44835,gun_shot
-wavs/noise/UrbanSound8K/audio/fold2/197320-6-12-0.wav,5531,31314,gun_shot
-wavs/noise/UrbanSound8K/audio/fold9/106955-6-0-0.wav,1602,49181,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/174285-6-0-0.wav,3631,85829,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/145206-6-2-0.wav,3970,27817,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-14-10.wav,18138,173318,gun_shot
-wavs/noise/UrbanSound8K/audio/fold3/110622-6-0-0.wav,435,39048,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/135528-6-3-0.wav,13888,73480,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/162433-6-6-0.wav,1402,23867,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/164667-6-0-0.wav,1276,24694,gun_shot
-wavs/noise/UrbanSound8K/audio/fold2/197320-6-5-0.wav,4852,33322,gun_shot
-wavs/noise/UrbanSound8K/audio/fold6/148835-6-0-0.wav,1286,23375,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-14-0.wav,1304,170947,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/174285-6-2-0.wav,1920,79200,gun_shot
-wavs/noise/UrbanSound8K/audio/fold10/169261-6-0-0.wav,1125,23829,gun_shot
-wavs/noise/UrbanSound8K/audio/fold2/76091-6-1-0.wav,1746,16706,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-14-9.wav,25606,175689,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/203128-3-9-0.wav,640,79060,dog_bark
+wavs/noise/UrbanSound8K/audio/fold3/116400-3-1-0.wav,87133,147948,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/31325-3-3-6.wav,1423,174977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/184575-3-0-2.wav,27029,162530,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/171464-3-1-0.wav,1161,190065,dog_bark
+wavs/noise/UrbanSound8K/audio/fold9/119420-3-1-0.wav,976,76635,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/61077-3-3-0.wav,1423,174977,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/116485-3-0-6.wav,7824,43033,dog_bark
+wavs/noise/UrbanSound8K/audio/fold8/110134-3-0-0.wav,804,41896,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/180977-3-1-1.wav,2710,180387,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/84317-3-0-0.wav,5779,105804,dog_bark
+wavs/noise/UrbanSound8K/audio/fold5/191382-3-1-1.wav,1067,48723,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/173994-3-0-14.wav,9290,382452,dog_bark
+wavs/noise/UrbanSound8K/audio/fold7/191687-3-0-15.wav,711,164308,dog_bark
+wavs/noise/UrbanSound8K/audio/fold4/109711-3-2-4.wav,38323,187355,dog_bark
 wavs/noise/UrbanSound8K/audio/fold5/7066-6-0-0.wav,1311,18864,gun_shot
-wavs/noise/UrbanSound8K/audio/fold6/148834-6-0-0.wav,1271,20930,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/145611-6-4-0.wav,7865,94169,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/159708-6-3-0.wav,377,14050,gun_shot
-wavs/noise/UrbanSound8K/audio/fold2/145608-6-1-0.wav,5316,85125,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/162432-6-3-0.wav,7281,44938,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/159701-6-0-0.wav,1102,85601,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/148837-6-0-0.wav,823,27138,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/35799-6-0-0.wav,2963,36279,gun_shot
-wavs/noise/UrbanSound8K/audio/fold6/158979-6-0-0.wav,1819,88239,gun_shot
-wavs/noise/UrbanSound8K/audio/fold1/46656-6-2-0.wav,3328,55510,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/159701-6-4-0.wav,894,96126,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/148827-6-2-0.wav,1027,25185,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/174285-6-1-0.wav,2460,70162,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/162435-6-3-0.wav,1642,39364,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/162433-6-5-0.wav,1908,22567,gun_shot
-wavs/noise/UrbanSound8K/audio/fold6/159702-6-3-0.wav,1211,29453,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/159708-6-6-0.wav,182,26472,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/135528-6-6-0.wav,16066,51232,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/162432-6-0-0.wav,12511,48405,gun_shot
-wavs/noise/UrbanSound8K/audio/fold6/148835-6-2-0.wav,565,45957,gun_shot
-wavs/noise/UrbanSound8K/audio/fold10/164646-6-0-0.wav,2563,14237,gun_shot
+wavs/noise/UrbanSound8K/audio/fold6/135544-6-14-0.wav,266,43285,gun_shot
 wavs/noise/UrbanSound8K/audio/fold4/148837-6-1-0.wav,317,44133,gun_shot
-wavs/noise/UrbanSound8K/audio/fold9/136399-6-0-0.wav,3026,53276,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-5-0.wav,5281,88447,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-7-0.wav,19449,96893,gun_shot
-wavs/noise/UrbanSound8K/audio/fold2/35800-6-0-0.wav,2727,173792,gun_shot
-wavs/noise/UrbanSound8K/audio/fold10/157207-6-9-0.wav,1858,21181,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/145206-6-1-0.wav,4095,40212,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/162432-6-5-0.wav,6108,32689,gun_shot
-wavs/noise/UrbanSound8K/audio/fold10/174292-6-0-0.wav,5670,78054,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/162432-6-14-0.wav,6032,27366,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/135528-6-2-0.wav,15648,144036,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/162432-6-11-0.wav,5203,28428,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/148827-6-4-0.wav,1104,23190,gun_shot
+wavs/noise/UrbanSound8K/audio/fold10/157800-6-0-0.wav,920,30420,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/145608-6-2-0.wav,6057,86287,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/162432-6-9-0.wav,7107,46328,gun_shot
+wavs/noise/UrbanSound8K/audio/fold9/106955-6-0-0.wav,1602,49181,gun_shot
+wavs/noise/UrbanSound8K/audio/fold1/122690-6-0-0.wav,3636,96778,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/135527-6-9-0.wav,19632,84600,gun_shot
+wavs/noise/UrbanSound8K/audio/fold9/136399-6-2-0.wav,6919,60911,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/197320-6-10-0.wav,5854,40383,gun_shot
 wavs/noise/UrbanSound8K/audio/fold8/162433-6-3-0.wav,1306,19676,gun_shot
-wavs/noise/UrbanSound8K/audio/fold10/157207-6-4-0.wav,2340,38947,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/135527-6-3-0.wav,4856,44005,gun_shot
-wavs/noise/UrbanSound8K/audio/fold5/162432-6-10-0.wav,8670,33911,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/159708-6-3-0.wav,377,14050,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/135528-6-0-0.wav,15176,102309,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/174284-6-2-0.wav,1842,39651,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/7064-6-2-0.wav,1664,43587,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/157799-6-0-0.wav,202,83355,gun_shot
+wavs/noise/UrbanSound8K/audio/fold6/148835-6-3-0.wav,662,52991,gun_shot
+wavs/noise/UrbanSound8K/audio/fold1/46656-6-3-0.wav,2901,56624,gun_shot
 wavs/noise/UrbanSound8K/audio/fold6/148833-6-1-0.wav,669,77392,gun_shot
-wavs/noise/UrbanSound8K/audio/fold8/145206-6-5-0.wav,5535,23673,gun_shot
-wavs/noise/UrbanSound8K/audio/fold9/136399-6-3-0.wav,7320,62461,gun_shot
+wavs/noise/UrbanSound8K/audio/fold10/159709-6-0-0.wav,1115,82126,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/135527-6-4-0.wav,7529,76134,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/135528-6-3-0.wav,13888,73480,gun_shot
+wavs/noise/UrbanSound8K/audio/fold6/135544-6-6-0.wav,14369,57921,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/174285-6-1-0.wav,2460,70162,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/162432-6-4-0.wav,6630,48529,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/148828-6-0-0.wav,782,20201,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/135527-6-6-0.wav,19659,93595,gun_shot
+wavs/noise/UrbanSound8K/audio/fold3/135526-6-12-0.wav,6831,98490,gun_shot
+wavs/noise/UrbanSound8K/audio/fold3/162431-6-0-0.wav,5574,37974,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/135527-6-14-0.wav,1304,170947,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/145612-6-1-0.wav,2929,65266,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/197320-6-5-0.wav,4852,33322,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/135528-6-10-0.wav,6218,81903,gun_shot
+wavs/noise/UrbanSound8K/audio/fold3/34708-6-3-0.wav,3516,40614,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/174285-6-2-0.wav,1920,79200,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/162432-6-5-0.wav,6108,32689,gun_shot
+wavs/noise/UrbanSound8K/audio/fold10/157207-6-3-0.wav,2633,35980,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/162435-6-2-0.wav,1471,23388,gun_shot
+wavs/noise/UrbanSound8K/audio/fold9/145683-6-3-0.wav,11697,72077,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/145612-6-2-0.wav,2642,68338,gun_shot
+wavs/noise/UrbanSound8K/audio/fold10/157207-6-6-0.wav,1680,26775,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/148841-6-1-0.wav,1064,29676,gun_shot
+wavs/noise/UrbanSound8K/audio/fold10/157207-6-8-0.wav,1940,24202,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/145608-6-3-0.wav,6848,76613,gun_shot
+wavs/noise/UrbanSound8K/audio/fold6/148834-6-0-0.wav,1271,20930,gun_shot
+wavs/noise/UrbanSound8K/audio/fold2/197320-6-7-0.wav,5960,32277,gun_shot
+wavs/noise/UrbanSound8K/audio/fold5/145609-6-0-0.wav,3430,103132,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/135527-6-14-4.wav,25962,174029,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/7065-6-0-0.wav,1074,43230,gun_shot
+wavs/noise/UrbanSound8K/audio/fold3/135526-6-5-0.wav,5584,94997,gun_shot
+wavs/noise/UrbanSound8K/audio/fold8/145206-6-3-0.wav,4301,32496,gun_shot
+wavs/noise/UrbanSound8K/audio/fold6/135544-6-15-0.wav,8022,50411,gun_shot
 wavs/noise/UrbanSound8K/audio/fold5/159701-6-3-0.wav,1694,39629,gun_shot
-wavs/noise/UrbanSound8K/audio/fold7/159708-6-1-0.wav,470,13480,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/162435-6-0-0.wav,1848,28367,gun_shot
 wavs/noise/UrbanSound8K/audio/fold9/174282-6-1-0.wav,1268,105730,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (72).wav,19935,66968,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (87).wav,17806,50710,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (31).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (98).wav,48581,85935,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (63).wav,3484,66194,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (61).wav,2323,43290,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (75).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (87).wav,28903,70065,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (92).wav,15097,94645,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (33).wav,1806,46774,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (77).wav,53097,86968,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (52).wav,41613,90581,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (55).wav,63032,92968,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (30).wav,46129,80903,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (48).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (99).wav,33290,83226,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (51).wav,11871,66194,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (43).wav,8323,36710,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (62).wav,4516,72903,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (42).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (23).wav,1161,62323,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (33).wav,1742,69677,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (19).wav,12181,40069,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (59).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (26).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (18).wav,37548,73161,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (35).wav,11203,81976,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (11).wav,24968,79742,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (74).wav,1161,82839,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (21).wav,22581,70000,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (67).wav,581,57097,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (41).wav,19032,40839,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (100).wav,3290,72516,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (31).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (46).wav,889,59571,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (55).wav,15419,87806,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (15).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (42).wav,20129,66000,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (85).wav,18194,68710,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (32).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (27).wav,11032,95226,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (28).wav,3226,42452,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (98).wav,27097,62323,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (51).wav,41290,88645,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (3).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (39).wav,45742,94065,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (51).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (8).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (72).wav,27419,89742,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (28).wav,70581,94774,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (83).wav,645,46387,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (15).wav,9677,85032,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (62).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (89).wav,19935,86516,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (52).wav,58839,95097,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (43).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (43).wav,20968,60065,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (11).wav,63806,87806,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (64).wav,28645,60645,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (71).wav,5779,32630,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (54).wav,0,45871,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (2).wav,8802,38854,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (1).wav,58839,81871,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (8).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (56).wav,581,36194,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (12).wav,16182,79487,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (80).wav,1935,61161,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (49).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (82).wav,68387,94710,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (80).wav,61032,83677,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (29).wav,129,31935,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (5).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (60).wav,6968,85355,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (42).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (73).wav,10968,95161,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (10).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (46).wav,8581,64000,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (29).wav,32903,91742,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (11).wav,889,28807,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (27).wav,34645,91742,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (70).wav,387,27419,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (6).wav,8323,86903,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (4).wav,194,16129,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (67).wav,38710,75677,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (1).wav,581,31355,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (45).wav,68903,96000,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (22).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (23).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (26).wav,11290,72065,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (22).wav,25355,80968,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (66).wav,12581,83613,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (34).wav,387,70065,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (61).wav,6387,83032,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (50).wav,1935,66968,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (96).wav,7469,38410,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (55).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (75).wav,36968,89097,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (77).wav,17032,67355,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (17).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (13).wav,2638,30171,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (22).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (20).wav,36581,94839,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (13).wav,37742,91742,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (14).wav,533,58148,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (47).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (72).wav,35677,81419,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (95).wav,49032,94065,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (85).wav,7677,37613,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (36).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (9).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (25).wav,1600,39240,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (47).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (16).wav,33677,71613,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (74).wav,6194,57097,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (24).wav,32516,87097,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (52).wav,452,50000,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (65).wav,21339,79309,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (35).wav,13161,92710,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (67).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (11).wav,7261,40040,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (38).wav,4645,94645,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (43).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (47).wav,57615,87489,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (83).wav,6313,36098,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (58).wav,13548,42387,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (3).wav,194,35097,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (94).wav,74968,87161,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (18).wav,18774,95032,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (32).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (79).wav,7355,90194,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (57).wav,60452,84387,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (9).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (40).wav,43161,84581,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (99).wav,34645,70903,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (26).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (70).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (56).wav,53347,87133,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (18).wav,9721,36483,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (12).wav,22839,91161,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (88).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (10).wav,65806,95548,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (10).wav,19548,92516,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (96).wav,23806,77226,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (21).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (14).wav,3290,75290,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (61).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (51).wav,968,83226,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (56).wav,49677,76065,gun_shot
-wavs/noise/gun_shot_wav\AK-47/1 (49).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (12).wav,10106,37965,gun_shot
-wavs/noise/gun_shot_wav\MP5/8 (97).wav,19548,67742,gun_shot
-wavs/noise/gun_shot_wav\Zastava M92/9 (72).wav,800,18582,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (89).wav,34710,74839,gun_shot
-wavs/noise/gun_shot_wav\M16/5 (87).wav,20323,56903,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (66).wav,20387,57742,gun_shot
-wavs/noise/gun_shot_wav\IMI Desert Eagle/2 (74).wav,0,95999,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (30).wav,0,88199,gun_shot
-wavs/noise/gun_shot_wav\AK-12/3 (91).wav,0,44099,gun_shot
-wavs/noise/gun_shot_wav\M249/6 (41).wav,9161,75548,gun_shot
-wavs/noise/gun_shot_wav\M4/4 (87).wav,21161,61355,gun_shot
-wavs/noise/gun_shot_wav\MG-42/7 (2).wav,2839,83548,gun_shot
-wavs/noise/UrbanSound8K/audio/fold4/113160-8-0-0.wav,1280,27314,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159755-8-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-11.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159744-8-0-3.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-7.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/62878-8-0-1.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-23.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/34952-8-0-0.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/124389-8-1-8.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/159738-8-0-5.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/124389-8-1-7.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/71177-8-1-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159750-8-0-3.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-14.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159748-8-2-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159750-8-0-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/42117-8-0-8.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-73.wav,16645,164129,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/117181-8-0-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-4.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-69.wav,112645,188903,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159753-8-0-1.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/156868-8-3-0.wav,1940,23328,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-2.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold10/159742-8-0-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159744-8-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-92.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-17.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-20.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-1-0.wav,747,42046,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/42117-8-0-7.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/107357-8-1-10.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/148632-8-0-8.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/87562-6-0-0.wav,883,66194,gun_shot
+wavs/noise/UrbanSound8K/audio/fold4/135528-6-11-0.wav,2781,67456,gun_shot
+wavs/noise/UrbanSound8K/audio/fold3/34708-6-4-0.wav,4260,44936,gun_shot
+wavs/noise/UrbanSound8K/audio/fold7/105289-8-0-1.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-18.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/156868-8-2-0.wav,480,19205,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-8.wav,0,191999,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold4/159753-8-0-4.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159750-8-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/106905-8-0-3.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/74726-8-2-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-9.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-9.wav,3097,174194,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-15.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/117181-8-0-5.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-19.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-74.wav,18581,167613,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-5.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/107357-8-1-15.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-6.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-21.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/28426-8-0-0.wav,0,133181,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159744-8-0-0.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159744-8-0-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/40722-8-0-3.wav,0,44099,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/34952-8-0-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159748-8-2-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-9.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-15.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-10.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-6.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/203913-8-0-11.wav,22406,160396,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-4.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-98.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/159742-8-0-10.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/165166-8-0-5.wav,20272,140124,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/26173-8-0-0.wav,0,104516,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-85.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/98525-8-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-27.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-24.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-0.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159748-8-0-5.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-7.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/203913-8-0-3.wav,17427,146881,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/203913-8-0-7.wav,14937,166798,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-13.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/74726-8-2-4.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/156869-8-0-10.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-87.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159748-8-0-7.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/42117-8-0-10.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-12.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-7.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-1.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/42117-8-0-11.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/40722-8-0-5.wav,0,44099,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-7.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/74726-8-0-16.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-12.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-27.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/184623-8-0-3.wav,47301,124831,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/123688-8-1-2.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/159738-8-0-6.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/117181-8-0-6.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-76.wav,5806,135871,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/42117-8-0-12.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-10.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-16.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/74726-8-0-14.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/159743-8-0-0.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/165166-8-0-7.wav,11381,81443,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/62878-8-0-0.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/124389-8-1-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-16.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-11.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159748-8-0-2.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/164053-8-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-22.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/105289-8-0-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-9.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold1/159738-8-0-4.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-1.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/156869-8-0-5.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-16.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/156869-8-0-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/74726-8-0-11.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-3.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/159748-8-2-3.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159748-8-0-8.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/188004-8-0-1.wav,51213,150794,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-99.wav,1548,65806,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/90014-8-0-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/159753-8-0-5.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-3.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold10/28808-1-0-7.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/128465-1-0-3.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold10/2937-1-0-0.wav,1045,19933,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-10-13.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/174840-1-0-0.wav,1154,105550,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold10/28808-1-0-1.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/7389-1-4-15.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/118070-1-0-0.wav,523,10128,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold10/28808-1-0-6.wav,20627,152216,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/34241-1-1-0.wav,2924,52510,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-21.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-2.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/62878-8-0-2.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/93567-8-0-17.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/74726-8-2-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/165166-8-0-3.wav,111317,173199,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/90014-8-0-4.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/75490-8-0-1.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-20.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159755-8-0-2.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/16772-8-0-0.wav,4391,70775,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159744-8-0-4.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-3.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-12.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/105289-8-1-1.wav,3912,143681,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/43805-8-2-0.wav,755,12103,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-71.wav,3484,178065,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-17.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-9.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-21.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159755-8-0-1.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-26.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-13.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/43805-8-1-0.wav,541,12697,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/107357-8-0-5.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/113160-8-0-0.wav,1280,27314,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/74726-8-1-1.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/159742-8-0-8.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/135160-8-0-3.wav,0,63999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-15.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-8.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-10.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-47.wav,5806,168000,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159753-8-0-0.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/74726-8-0-16.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/117181-8-0-4.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/157866-8-0-17.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/107357-8-1-14.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-20.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/157868-8-0-27.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-21.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/159750-8-0-8.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/203913-8-0-2.wav,4979,62594,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/123688-8-1-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/34952-8-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159748-8-0-3.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159755-8-0-3.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/157867-8-0-25.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/156869-8-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159752-8-0-6.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-83.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-18.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-12.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/159747-8-0-6.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/96657-8-0-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/118279-8-0-9.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold7/107357-8-1-10.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/94636-8-0-8.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/159751-8-0-2.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/203913-8-0-6.wav,8180,165019,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-73.wav,16645,164129,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/24347-8-0-66.wav,48387,184645,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/159748-8-2-5.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/111671-8-0-7.wav,0,191999,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/7389-1-4-14.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/180156-1-8-0.wav,2778,25061,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/162541-1-2-0.wav,255,33176,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/175845-1-0-0.wav,1286,33580,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold6/128465-1-0-2.wav,0,191999,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/179863-1-0-0.wav,366,34233,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold6/175848-1-0-0.wav,0,25812,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/24076-1-0-0.wav,0,43658,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-8.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold4/176003-1-0-0.wav,0,107519,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/162541-1-1-0.wav,435,25040,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-17.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-10-11.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/18594-1-1-0.wav,0,27782,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/175851-1-0-0.wav,0,69119,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-8-0.wav,0,174194,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/164625-1-0-0.wav,1956,14464,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/99812-1-0-1.wav,110606,171777,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-5.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-3-0.wav,0,174194,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-10-7.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-2.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/54187-1-0-3.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold5/71439-1-0-0.wav,25276,59263,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/24074-1-0-4.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/175856-1-0-0.wav,909,12801,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold1/94868-1-0-0.wav,1931,14835,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/73168-1-1-0.wav,0,49898,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/179866-1-0-0.wav,0,23303,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold2/179866-1-1-0.wav,0,34339,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/175852-1-0-0.wav,0,54239,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/180156-1-6-0.wav,0,187444,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/68657-1-0-0.wav,0,32871,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-9-5.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold6/179860-1-0-0.wav,0,52319,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/178402-1-0-0.wav,1188,89063,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold4/171249-1-0-0.wav,2635,32232,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/18594-1-0-0.wav,891,15887,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-18.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold10/28808-1-0-8.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-15.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/26177-1-1-0.wav,0,51596,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/72567-1-1-0.wav,0,51359,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-0-3.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/179864-1-0-0.wav,310,36232,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/9674-1-0-2.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/77509-1-0-0.wav,787,17152,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/54086-1-0-0.wav,0,51155,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-9-6.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/175847-1-0-0.wav,0,39191,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-16.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/100648-1-3-0.wav,432,67409,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/32417-1-0-0.wav,735,14702,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold1/24074-1-0-9.wav,0,176399,siren_car_horn
 wavs/noise/UrbanSound8K/audio/fold1/94868-1-1-0.wav,1208,18116,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/99812-1-4-0.wav,54863,83853,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold9/26185-1-1-0.wav,920,14308,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold4/187356-1-6-0.wav,0,163113,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-13.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold8/125520-1-2-0.wav,0,41638,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-14.wav,0,176399,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/164627-1-0-0.wav,1015,60459,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold7/99812-1-0-2.wav,23473,81443,siren_car_horn
-wavs/noise/UrbanSound8K/audio/fold5/72259-1-2-0.wav,0,142442,siren_car_horn
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/21c07aff-0a8d-4e74-ad5e-e3c7f7bcb11b-1430031235662-1.7-m-04-hu.wav,5016,39021,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/be21ef2a-a415-4e8b-bfe6-731bf9956e2c-1431320909516-1.7-f-26-hu.wav,11338,48608,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/549a46d8-9c84-430e-ade8-97eae2bef787-1430130714659-1.7-m-48-hu.wav,26887,44811,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/2294E2B2-8E36-4DA6-A898-B947CB9446AB-1436462707-1.1-m-26-dc.wav,19758,51710,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8FDA58A7-FDC6-4421-855F-738E6E853E43-1429895751-1.0-m-26-hu.wav,27774,55435,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8f4dbf5a-b504-4452-b6ac-94e646a6a052-1430735057816-1.7-f-72-hu.wav,28796,54021,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/6bd76f21-f279-4c46-9453-58c95e7b2475-1430767927715-1.7-m-72-hu.wav,14735,51785,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/0776b33b-c41a-4a2e-8b9c-f1c184be00c8-1437123838264-1.7-f-26-hu.wav,2582,55343,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/3030d0e9-0c9b-4616-9b83-f10dc2dedbfd-1430053447333-1.7-m-26-hu.wav,7284,53376,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/edb5924c-07ba-4eaa-838b-aaf9511a219b-1431899400326-1.7-m-48-hu.wav,2806,14930,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/5C2F730C-9721-40B7-A2D8-C257DB518978-1429966327-1.0-m-04-hu.wav,16371,42452,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/549a46d8-9c84-430e-ade8-97eae2bef787-1430130772174-1.7-m-48-bp.wav,22940,53183,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/653bf718-94bd-40d0-af7c-8fe44e07640c-1430759231913-1.7-m-04-hu.wav,15092,36286,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/30c2cee4-b682-4dcb-86b9-7fa6f36f1b66-1430728411287-1.7-f-72-hu.wav,12985,30894,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/f5b29377-7cd6-4688-942c-5a07add39dc5-1437178455960-1.7-f-26-hu.wav,797,32909,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/999bf14b-e417-4b44-b746-9253f81efe38-1431013068243-1.7-m-26-hu.wav,2782,52974,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/B2A105BB-347B-4878-A735-AA4ECF32CD16-1436864116-1.1-m-26-hu.wav,0,55999,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/d6cda191-4962-4308-9a36-46d5648a95ed-1431587899682-1.7-m-04-ti.wav,183,18040,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/5728DDD6-149B-412F-A14B-C29B9B5E415F-1432635047-1.0-m-26-hu.wav,565,46177,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/3bb2445a-9ae9-4dc8-9a2e-86c696ffa405-1430142784308-1.7-m-26-hu.wav,0,54719,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/c6fd9d60-0fa7-44c0-b3ce-0192527d7b81-1430068167526-1.7-m-72-hu.wav,9514,52600,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/D18A30C6-4370-4BE0-83F8-031892F96603-1432989796-1.1-f-04-hu.wav,70,29393,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/549a46d8-9c84-430e-ade8-97eae2bef787-1430130686288-1.7-m-48-hu.wav,8323,31848,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/B0D9116D-8FA4-41AF-B626-BE508FD5CA04-1430832542-1.0-m-04-hu.wav,21176,55412,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/DCB33551-F9BA-4B4A-8DA1-A3107E1AD859-1430406495-1.0-m-04-hu.wav,565,20887,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/10A40438-09AA-4A21-83B4-8119F03F7A11-1430848060-1.0-f-26-hu.wav,3387,55548,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/bfbc4d23-39b2-4b33-b686-2f048f062b60-1430077722675-1.7-f-72-hu.wav,41992,53074,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/643D64AD-B711-469A-AF69-55C0D5D3E30F-1430138591-1.0-m-72-bp.wav,1242,14565,baby_crying
+wavs/noise/UrbanSound8K/audio/fold7/99812-1-0-0.wav,13515,125187,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-1-0.wav,0,166256,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-21.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/179863-1-0-0.wav,366,34233,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/132073-1-3-0.wav,0,95331,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold2/132073-1-1-0.wav,1892,53968,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-18.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-13.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-7-8.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold8/155283-1-0-0.wav,1347,22363,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/155130-1-1-0.wav,0,29889,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold9/54187-1-0-4.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold10/66115-1-0-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold5/72259-1-10-0.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-17.wav,0,176399,siren_car_horn
+wavs/noise/UrbanSound8K/audio/fold3/199769-1-0-5.wav,0,176399,siren_car_horn
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/c10e2b0f-0cb8-4485-b82f-d453edf97db7-1430739179429-1.7-f-26-hu.wav,6547,54300,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/1259bcad-2308-46fa-9a36-b5d8f359886a-1430143644843-1.7-f-04-hu.wav,9405,54105,baby_crying
 wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8f4dbf5a-b504-4452-b6ac-94e646a6a052-1430735157938-1.7-f-72-hu.wav,34600,54802,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/b4c460d8-bd6b-4017-9bb8-2ae4ff0c5af1-1432751065608-1.7-f-26-hu.wav,5724,50956,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8c2a1f03-07f4-4aee-a73f-bc57beb2b600-1430761324670-1.7-f-26-hu.wav,19170,52692,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\burping/af30880e-5f98-4dc0-b37a-be6b21fa0ba3-1431240072536-1.7-m-26-bu.wav,2778,51863,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/fa8620d3-e7db-4101-aff0-28dbf0d96a5f-1434296505682-1.7-f-04-hu.wav,6269,50731,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/96986c8b-9988-4c37-a0f8-e7c4269cc3ac-1431719845836-1.7-m-26-hu.wav,4552,51159,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/c7fef089-4a65-4b75-bfd4-bae0e3518adf-1430754388848-1.7-m-04-hu.wav,11358,28294,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/5f651112-d2a3-4911-b3a5-f37bfc092494-1430734658837-1.7-m-72-hu.wav,5246,47324,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/1309B82C-F146-46F0-A723-45345AFA6EA8-1430704008-1.0-f-48-dc.wav,43806,55774,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/090C15A8-5406-4EA5-97A3-81F6527227C0-1430147515-1.0-m-72-hu.wav,40984,55774,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/999bf14b-e417-4b44-b746-9253f81efe38-1430845035663-1.7-m-26-ch.wav,3116,54421,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/d6cda191-4962-4308-9a36-46d5648a95ed-1428333797380-1.5-f-26-hu.wav,10120,30690,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/5C2F730C-9721-40B7-A2D8-C257DB518978-1429966336-1.0-m-04-hu.wav,8016,48661,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/771fa0cc-4535-471b-9cec-d26deff8d567-1429803644891-1.7-m-04-hu.wav,5170,52580,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/C249BCDD-0F65-4D6A-82BE-43C4006E3DDB-1436891733-1.1-m-72-hu.wav,7113,38726,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/39180491-e076-4300-b5de-24e812dca6fe-1435708371348-1.7-f-04-hu.wav,9958,51598,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/10A40438-09AA-4A21-83B4-8119F03F7A11-1430848070-1.0-f-26-hu.wav,8581,54306,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/64acb345-a61e-4ef3-a5a6-cf83c04b83f1-1430045478300-1.7-m-72-hu.wav,2148,39101,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/10A40438-09AA-4A21-83B4-8119F03F7A11-1430848101-1.0-f-26-hu.wav,15242,55210,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/10A40438-09AA-4A21-83B4-8119F03F7A11-1430848034-1.0-f-26-hu.wav,8016,55661,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7b23d26e-6f97-4e8b-b520-a9fdde21ee91-1432275312750-1.7-m-48-hu.wav,3470,55408,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/02c3b725-26e4-4a2c-9336-04ddc58836d9-1430726196216-1.7-m-04-hu.wav,3918,14664,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/3c51dedc-6e4c-47dd-a179-86a25e95f1ef-1430651049104-1.7-m-72-hu.wav,3758,51584,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/10A40438-09AA-4A21-83B4-8119F03F7A11-1430925142-1.0-f-26-dc.wav,1806,55849,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/1b381a1e-88a6-4a48-b889-a5ccdf0aacaf-1430299568333-1.7-f-72-hu.wav,17027,50526,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/F24DE44B-762C-4149-AC92-96A5E57ED118-1430816918-1.0-m-04-hu.wav,6661,47306,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/a40b9b8d-e4bc-457a-badf-f38bdbc0c358-1430016779981-1.7-m-26-hu.wav,43357,54857,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/ad7fd28b-3e85-4e9b-9e18-af4bda64c60f-1430756389867-1.7-m-72-hu.wav,23121,45067,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/602b06a7-31f0-4370-b35a-9cc81d205958-1430739609286-1.7-f-72-hu.wav,1438,50897,baby_crying
 wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/d6cda191-4962-4308-9a36-46d5648a95ed-1431882032820-1.7-m-04-hu.wav,1027,52947,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/1259bcad-2308-46fa-9a36-b5d8f359886a-1430143617162-1.7-m-04-hu.wav,26444,53774,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/F6C6D3EE-F139-48A4-9EAC-0A50EB011CDC-1430103957-1.0-m-04-hu.wav,312,27218,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/FF2CD2F6-404D-4626-8718-6E6C751F63B8-1431104396-1.0-m-04-hu.wav,11968,44371,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/7A22229D-06C2-4AAA-9674-DE5DF1906B3A-1436891944-1.1-m-72-ti.wav,12798,45423,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/218e6fd7-f9c5-4490-afd7-c4fba174e7d2-1430209252819-1.7-m-72-hu.wav,32339,54316,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/090C15A8-5406-4EA5-97A3-81F6527227C0-1430147582-1.0-m-72-hu.wav,8016,47984,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/9CFD61B9-BF13-406D-8B2F-F73CFAAF25CB-1430927704-1.0-f-04-hu.wav,16935,36694,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/40a4c760-facf-4911-b0a6-22eccc3ab18d-1430477717469-1.7-f-26-hu.wav,6605,39399,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/64acb345-a61e-4ef3-a5a6-cf83c04b83f1-1430058990597-1.7-m-72-dc.wav,17617,41679,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/1259bcad-2308-46fa-9a36-b5d8f359886a-1430143668806-1.7-f-04-hu.wav,20875,46803,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7A864194-4B6B-4850-ABBF-0C2A8170107B-1436846870-1.1-f-26-hu.wav,30484,55435,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/40a4c760-facf-4911-b0a6-22eccc3ab18d-1430477756469-1.7-f-26-hu.wav,6149,45662,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/D54D9C2A-56ED-4338-9D1F-2ADB4E081DAD-1430036301-1.0-m-48-hu.wav,11268,50095,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/36f1b3ec-3d2a-470e-af6f-0a8cc11b2723-1430237012976-1.7-m-04-hu.wav,2470,37494,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/cecd525b-18fd-49e3-b2b9-dfb08b93ad95-1430110029205-1.7-m-26-ti.wav,21305,43394,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/177dc72e-d0f8-47ef-a5a7-3b46878e11a0-1430736533767-1.7-f-26-hu.wav,42859,55137,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/67414C5E-0EB2-48FD-8391-FCF085FDB6D9-1430050964-1.0-m-04-hu.wav,18290,43129,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/D54D9C2A-56ED-4338-9D1F-2ADB4E081DAD-1429807598-1.0-m-48-hu.wav,17161,55887,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/1309B82C-F146-46F0-A723-45345AFA6EA8-1430059864-1.0-f-04-ti.wav,1280,55059,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/B2AABCE0-1F62-4B57-B58A-308959ABDFE7-1437188751-1.1-m-26-ti.wav,10301,48645,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/643D64AD-B711-469A-AF69-55C0D5D3E30F-1430138495-1.0-m-72-bp.wav,7000,23484,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/d6cda191-4962-4308-9a36-46d5648a95ed-1431086262776-1.7-m-04-ch.wav,6840,50638,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/090C15A8-5406-4EA5-97A3-81F6527227C0-1430147515-1.0-m-72-hu.wav,40984,55774,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\tired/7A22229D-06C2-4AAA-9674-DE5DF1906B3A-1436891957-1.1-m-72-ti.wav,40670,55412,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/0776b33b-c41a-4a2e-8b9c-f1c184be00c8-1437123838264-1.7-f-26-hu.wav,2582,55343,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/c42e76b9-a4c1-48f6-a91d-27ab83015874-1430737177322-1.7-f-72-hu.wav,29951,46194,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8f4dbf5a-b504-4452-b6ac-94e646a6a052-1430735057816-1.7-f-72-hu.wav,28796,54021,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/602b06a7-31f0-4370-b35a-9cc81d205958-1430739585531-1.7-m-04-hu.wav,9487,39846,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/e37c323c-0edb-4942-be47-3cc0b2de00a1-1434392936735-1.7-f-26-hu.wav,18704,43152,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/C249BCDD-0F65-4D6A-82BE-43C4006E3DDB-1436891733-1.1-m-72-hu.wav,7113,38726,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/323cab80-2551-4a46-8c3d-62c7a5264afa-1430382588301-1.7-m-22-hu.wav,0,55199,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/6639C63C-F634-489C-91B3-E3DB5930EFD5-1431370257-1.1-m-04-hu.wav,7565,53968,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/50DC5FBC-AC95-44F2-B55F-E4E5FB03AC96-1430007656-1.0-m-26-hu.wav,790,54081,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/090C15A8-5406-4EA5-97A3-81F6527227C0-1430147525-1.0-m-72-hu.wav,44145,56000,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/376C006E-3664-4056-80D0-7661F631A062-1436930593-1.1-m-26-hu.wav,16597,49113,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/aaa57dbd-7b88-454a-963e-6faa2f4ed4e7-1436988612387-1.7-f-04-hu.wav,4131,46497,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/1309B82C-F146-46F0-A723-45345AFA6EA8-1430703937-1.0-f-48-dc.wav,3613,19645,baby_crying
 wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/0c8f14a9-6999-485b-97a2-913c1cbf099c-1430760394426-1.7-m-26-hu.wav,16502,29636,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/F24DE44B-762C-4149-AC92-96A5E57ED118-1430816936-1.0-m-04-hu.wav,1242,55699,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/999bf14b-e417-4b44-b746-9253f81efe38-1430844958178-1.7-m-04-ch.wav,35390,54977,baby_crying
-wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7A22229D-06C2-4AAA-9674-DE5DF1906B3A-1436891933-1.1-m-72-hu.wav,19194,53968,baby_crying
-wavs/noise/ESC-50-master/audio/1-22694-B-20.wav,11114,56014,baby_crying
-wavs/noise/ESC-50-master/audio/3-151080-A-20.wav,0,220499,baby_crying
-wavs/noise/ESC-50-master/audio/1-22694-A-20.wav,99136,207163,baby_crying
-wavs/noise/ESC-50-master/audio/3-152007-B-20.wav,0,220499,baby_crying
-wavs/noise/ESC-50-master/audio/5-198411-E-20.wav,0,220499,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/549a46d8-9c84-430e-ade8-97eae2bef787-1430130772174-1.7-m-48-bp.wav,22940,53183,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7A864194-4B6B-4850-ABBF-0C2A8170107B-1436846870-1.1-f-26-hu.wav,30484,55435,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/69374818-7b73-48ac-8200-e6a225e293fb-1430746080630-1.7-m-04-hu.wav,12248,53543,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/50DC5FBC-AC95-44F2-B55F-E4E5FB03AC96-1430108024-1.0-m-26-hu.wav,6774,52839,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/e4051e62-d21d-4bb8-a235-fd7e859ad787-1430739655763-1.7-m-04-hu.wav,29773,55177,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7060a4f6-4c0c-494b-912c-ae60158b185a-1436931995150-1.7-f-04-hu.wav,13320,54625,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/643D64AD-B711-469A-AF69-55C0D5D3E30F-1430138591-1.0-m-72-bp.wav,1242,14565,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7616E8F4-B1A7-45A6-9A0C-C9BB2DE64FC3-1436868751-1.1-m-72-hu.wav,11742,55323,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/52dfc27a-fbc4-4d9f-bbcf-6406c919324a-1430041657947-1.7-m-26-hu.wav,6474,30694,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/F4A65A98-ADEE-49C4-9B45-65A8429DF170-1430232330-1.0-m-72-hu.wav,339,18855,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/F4A0C710-AC2D-42E0-8EA9-3E4CAC31EE20-1430318416-1.0-m-04-hu.wav,2970,53156,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/bfbc4d23-39b2-4b33-b686-2f048f062b60-1430077722675-1.7-f-72-hu.wav,41992,53074,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/c7fef089-4a65-4b75-bfd4-bae0e3518adf-1430754388848-1.7-m-04-hu.wav,11358,28294,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7E4B9C14-F955-4BED-9B03-7F3096A6CBFF-1430232157-1.0-f-26-hu.wav,46403,55661,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\belly_pain/643D64AD-B711-469A-AF69-55C0D5D3E30F-1430138545-1.0-m-72-bp.wav,0,55999,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/fa8620d3-e7db-4101-aff0-28dbf0d96a5f-1434465485354-1.7-f-04-hu.wav,13682,26129,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/9CFD61B9-BF13-406D-8B2F-F73CFAAF25CB-1430927704-1.0-f-04-hu.wav,16935,36694,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\discomfort/f5b29377-7cd6-4688-942c-5a07add39dc5-1437480263225-1.7-f-26-dc.wav,0,56479,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/8f4dbf5a-b504-4452-b6ac-94e646a6a052-1430735040980-1.7-f-72-hu.wav,2470,18859,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/b4c460d8-bd6b-4017-9bb8-2ae4ff0c5af1-1432751065608-1.7-f-26-hu.wav,5724,50956,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/64acb345-a61e-4ef3-a5a6-cf83c04b83f1-1430058973897-1.7-m-72-hu.wav,5339,24878,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/FF2CD2F6-404D-4626-8718-6E6C751F63B8-1431104396-1.0-m-04-hu.wav,11968,44371,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/7B924575-21FC-462A-969E-BABB46D1CBF5-1430055234-1.0-f-72-hu.wav,24839,54194,baby_crying
+wavs/noise/donateacry-corpus/donateacry_corpus_cleaned_and_updated_data\hungry/4CD5903D-E2CE-401E-B898-D873C763F44B-1430727644-1.0-m-26-hu.wav,31161,54419,baby_crying
+wavs/noise/ESC-50-master/audio/1-187207-A-20.wav,19116,88022,baby_crying
+wavs/noise/ESC-50-master/audio/4-185575-B-20.wav,0,220499,baby_crying
+wavs/noise/ESC-50-master/audio/1-211527-C-20.wav,0,220499,baby_crying
 wavs/noise/ESC-50-master/audio/4-185575-A-20.wav,0,220499,baby_crying
-wavs/noise/ESC-50-master/audio/2-151079-A-20.wav,13781,169376,baby_crying
+wavs/noise/ESC-50-master/audio/4-167077-C-20.wav,0,220499,baby_crying
+wavs/noise/ESC-50-master/audio/5-198411-D-20.wav,0,220499,baby_crying
 wavs/noise/ESC-50-master/audio/2-50665-A-20.wav,1778,124920,baby_crying
+wavs/noise/ESC-50-master/audio/3-151080-A-20.wav,0,220499,baby_crying
