@@ -13,6 +13,7 @@
 *.wav
 nnse/python/data/*tfrecords*.csv
 evb/src/weights
+evb/build
 python/fix.py
 python/wavs
 python/mel_org.py

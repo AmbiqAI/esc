@@ -19,22 +19,25 @@ int16_t buf_downsample[160];
 // #define ENERGY_MEASUREMENT
 #define NUM_CHANNELS 1
 int volatile g_intButtonPressed = 0;
+#define USE_PDM_MICROPHONE
+
 ///Button Peripheral Config Struct
-#ifdef DEF_GUI_ENABLE
+// #ifdef DEF_GUI_ENABLE
+// ns_button_config_t button_config_nnsp = {
+//     .button_0_enable = false,
+//     .button_1_enable = false,
+//     .button_0_flag = NULL,
+//     .button_1_flag = NULL
+// };
+// #else
 ns_button_config_t button_config_nnsp = {
-    .button_0_enable = false,
-    .button_1_enable = false,
-    .button_0_flag = NULL,
-    .button_1_flag = NULL
-};
-#else
-ns_button_config_t button_config_nnsp = {
+    .api = &ns_button_V1_0_0,
     .button_0_enable = true,
     .button_1_enable = false,
     .button_0_flag = &g_intButtonPressed,
     .button_1_flag = NULL
 };
-#endif
+// #endif
 /// Set by app when it wants to start recording, used by callback
 bool volatile static g_audioRecording = false;
 /// Set by callback when audio buffer has been copied, cleared by
@@ -42,9 +45,28 @@ bool volatile static g_audioRecording = false;
 bool volatile static g_audioReady = false;
 /// Audio buffer for application
 int16_t static g_in16AudioDataBuffer[LEN_STFT_HOP << 1];
-uint32_t static audadcSampleBuffer[(LEN_STFT_HOP << 1) + 3];
+// uint32_t static audadcSampleBuffer[(LEN_STFT_HOP << 1) + 3];
+alignas(16) uint32_t static dmaBuffer[(LEN_STFT_HOP << 1)]; // DMA target
+
+#ifndef USE_PDM_MICROPHONE
+am_hal_audadc_sample_t static workingBuffer[LEN_STFT_HOP]; 
+#endif // USE_PDM_MICROPHONE
+
+#if !defined(NS_AMBIQSUITE_VERSION_R4_1_0) && defined(NS_AUDADC_PRESENT)
+am_hal_offset_cal_coeffs_array_t sOffsetCalib;
+#endif
+
+
 
 #ifdef DEF_GUI_ENABLE 
+size_t ucHeapSize = NS_RPC_MALLOC_SIZE_IN_K * 4 *1024;
+uint8_t ucHeap[NS_RPC_MALLOC_SIZE_IN_K * 4 *1024] __attribute__((aligned(4)));
+// USB bufffers declared locally
+#define MY_USB_RX_BUFSIZE 2048
+#define MY_USB_TX_BUFSIZE 2048
+static uint8_t my_cdc_rx_ff_buf[MY_USB_RX_BUFSIZE];
+static uint8_t my_cdc_tx_ff_buf[MY_USB_TX_BUFSIZE];
+
 static char msg_store[30] = "Audio16bPCM_to_WAV";
 char msg_compute[30] = "CalculateMFCC_Please";
 // Block sent to PC
@@ -66,11 +88,19 @@ dataBlock computeBlock = {  // this block is useless here actually
 
 dataBlock IsRecordBlock;
 // Block sent to PC for computation
-ns_rpc_config_t rpcConfig = {.mode = NS_RPC_GENERICDATA_CLIENT,
-                            .sendBlockToEVB_cb = NULL,
-                            .fetchBlockFromEVB_cb = NULL,
-                            .computeOnEVB_cb = NULL};
+
+static ns_rpc_config_t rpcConfig = {
+    .api = &ns_rpc_gdo_V1_0_0,
+    .mode = NS_RPC_GENERICDATA_CLIENT,
+    .rx_buf = my_cdc_rx_ff_buf,
+    .rx_bufLength = MY_USB_RX_BUFSIZE,
+    .tx_buf = my_cdc_tx_ff_buf,
+    .tx_bufLength = MY_USB_TX_BUFSIZE,
+    .sendBlockToEVB_cb = NULL,
+    .fetchBlockFromEVB_cb = NULL,
+    .computeOnEVB_cb = NULL};
 #endif
+
 /**
 * 
 * @brief Audio Callback (user-defined, executes in IRQ context)
@@ -83,31 +113,12 @@ ns_rpc_config_t rpcConfig = {.mode = NS_RPC_GENERICDATA_CLIENT,
 */
 void
 audio_frame_callback(ns_audio_config_t *config, uint16_t bytesCollected) {
-    uint32_t *pui32_buffer =
-        (uint32_t *) am_hal_audadc_dma_get_buffer(config->audioSystemHandle);
 
     if (g_audioRecording) {
-        if (g_audioReady)
-            ns_lp_printf("Warning - audio buffer wasnt consumed in time\n");
-
-        // Raw PCM data is 32b (12b/channel) - here we only care about one
-        // channel For ringbuffer mode, this loop may feel extraneous, but it is
-        // needed because ringbuffers are treated a blocks, so there is no way
-        // to convert 32b->16b
-        for (int i = 0; i < config->numSamples; i++) {
-            g_in16AudioDataBuffer[i] = (int16_t)( pui32_buffer[i] & 0x0000FFF0);
-
-            if (i == 4) {
-                // Workaround for AUDADC sample glitch, here while it is root caused
-                g_in16AudioDataBuffer[3] = (g_in16AudioDataBuffer[2] + g_in16AudioDataBuffer[4]) >> 1; 
-            }
-        }
-#ifdef RINGBUFFER_MODE
-        ns_ring_buffer_push(&(config->bufferHandle[0]),
-                                      g_in16AudioDataBuffer,
-                                      (config->numSamples * 2), // in bytes
-                                      false);
-#endif
+        // if (g_audioReady)
+        //     ns_lp_printf("Warning - audio buffer wasnt consumed in time\n");
+        
+        ns_audio_getPCM_v2(config, g_in16AudioDataBuffer);
         g_audioReady = true;
     }
 }
@@ -118,43 +129,48 @@ audio_frame_callback(ns_audio_config_t *config, uint16_t bytesCollected) {
  * Populate this struct before calling ns_audio_config()
  * 
  */
-ns_audio_config_t audio_config = {
-#ifdef RINGBUFFER_MODE
-    .eAudioApiMode = NS_AUDIO_API_RINGBUFFER,
-    .callback = audio_frame_callback,
-    .audioBuffer = (void *)&pui8AudioBuff,
-#else
+
+static ns_audio_config_t audio_config = {
+    .api = &ns_audio_V2_0_0,
     .eAudioApiMode = NS_AUDIO_API_CALLBACK,
     .callback = audio_frame_callback,
-    .audioBuffer = (void *) &g_in16AudioDataBuffer,
-#endif
+    .audioBuffer = (void *)&g_in16AudioDataBuffer,
+
+#ifdef USE_PDM_MICROPHONE
+    .eAudioSource = NS_AUDIO_SOURCE_PDM,
+#else
     .eAudioSource = NS_AUDIO_SOURCE_AUDADC,
-    .sampleBuffer = audadcSampleBuffer,
+#endif
+    .sampleBuffer = dmaBuffer,
+#if !defined(AUDIO_LEGACY) && defined(NS_AUDADC_PRESENT) && !defined(USE_PDM_MICROPHONE)
+    .workingBuffer = workingBuffer,
+#endif
     .numChannels = NUM_CHANNELS,
     .numSamples = LEN_STFT_HOP,
     .sampleRate = SAMPLING_RATE,
     .audioSystemHandle = NULL, // filled in by audio_init()
-#ifdef RINGBUFFER_MODE
-    .bufferHandle = audioBuf
-#else
-    .bufferHandle = NULL
+    .bufferHandle = NULL,
+#if !defined(NS_AMBIQSUITE_VERSION_R4_1_0) && defined(NS_AUDADC_PRESENT)
+    .sOffsetCalib = &sOffsetCalib,
 #endif
 };
 
-const ns_power_config_t ns_lp_audio = {
-        .eAIPowerMode           = NS_MAXIMUM_PERF,
-        .bNeedAudAdc            = true,
-        .bNeedSharedSRAM        = false,
-        .bNeedCrypto            = false,
-        .bNeedBluetooth         = false,
-        .bNeedUSB               = false,
-        .bNeedIOM               = false,
-        .bNeedAlternativeUART   = false,
-        .b128kTCM               = false,
-        .bEnableTempCo          = false,
-        .bNeedITM               = false};                                  
+
+// const ns_power_config_t ns_lp_audio = {
+//         .eAIPowerMode           = NS_MAXIMUM_PERF,
+//         .bNeedAudAdc            = true,
+//         .bNeedSharedSRAM        = false,
+//         .bNeedCrypto            = false,
+//         .bNeedBluetooth         = false,
+//         .bNeedUSB               = false,
+//         .bNeedIOM               = false,
+//         .bNeedAlternativeUART   = false,
+//         .b128kTCM               = false,
+//         .bEnableTempCo          = false,
+//         .bNeedITM               = false};                                  
 
 int main(void) {
+    ns_core_config_t ns_core_cfg = {.api = &ns_core_V1_0_0};
     escCntrlClass cntrl_inst;
     int16_t *esc_output = g_in16AudioDataBuffer + LEN_STFT_HOP;
     NNSPClass *pt_nnsp;
@@ -162,8 +178,9 @@ int main(void) {
     int32_t tmp;
     g_audioRecording = false;
     
-    ns_core_init();
+    NS_TRY(ns_core_init(&ns_core_cfg), "Core init failed.\n");
     // ns_power_config(&ns_lp_audio);
+
     ns_power_config(&ns_audio_default);
 
     #ifdef ENERGY_MEASUREMENT
@@ -183,17 +200,22 @@ int main(void) {
     escCntrlClass_init(&cntrl_inst);
     pt_nnsp = (NNSPClass*) cntrl_inst.pt_nnsp;
 #ifdef DEF_ACC32BIT_OPT
-    ns_lp_printf("You are using \"32bit\" accumulator.\n");
+    ns_lp_printf("Note: You are using \"32bit\" accumulator.\n");
 #else
-    ns_lp_printf("You are using \"64bit\" accumulator.\n");
+    ns_lp_printf("Note: You are using \"64bit\" accumulator.\n");
 #endif
 
 #ifdef DEF_GUI_ENABLE
-    ns_rpc_genericDataOperations_init(&rpcConfig); // init RPC and USB
-    ns_lp_printf("\nTo start recording, on your cmd, type\n\n");
+    NS_TRY(ns_rpc_genericDataOperations_init(&rpcConfig), "RPC Init Failed\n"); // init RPC and USB
+    ns_lp_printf("Before continuing, please start the PC-side application according to the following instructions\n");
     ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/tty.usbmodem1234561 # MacOS \n");
     ns_lp_printf("\t\tor\n");
     ns_lp_printf("\t> python ../python/tools/audioview_esc.py --tty=COM4 # Windows \n");
+    ns_lp_printf("Once the application is started, press EVB Button 0 to connect.\n");
+    while (g_intButtonPressed == 0) {
+        ns_delay_us(1000);
+    }
+    g_intButtonPressed = 0;
     ns_lp_printf("\nPress \'record\' on GUI to start, and then \'stop\' on GUI to stop recording.\n");
     ns_lp_printf("(You might change the \"--tty\" option based on your OS.)\n\n");
     ns_lp_printf("After \'stop\', check the raw recorded speech \'audio_raw.wav\' and enhanced speech \'audio_se.wav\'\n");
@@ -204,7 +226,7 @@ int main(void) {
 
     // tflite_init();
     // test_tflite();
-    
+
     while (1) 
     {
         g_audioRecording = false;
@@ -214,7 +236,6 @@ int main(void) {
 #ifdef DEF_GUI_ENABLE
         while (1)
         {
-            
             ns_rpc_data_computeOnPC(&computeBlock, &IsRecordBlock);
             if (IsRecordBlock.buffer.data[0]==1)
             {
