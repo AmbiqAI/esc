@@ -36,25 +36,31 @@ The SE model is trained based on several audio dataset, including human speech a
 From the `esc/evb/` directory:
 
 1. `make clean`
-2. `make`
+2. `make # For AUDADC`  \
+      or \
+   `make DEF_USE_PDM_MICROPHONE=1 # For AUDADC`
 3. `make deploy` Prepare two USB cables. Ensure your board is connected via both the `JLINK USB port` and the `audio USB port`. Then turn on the power on EVB.
 4. Plug a mic into the 3.5mm port, and push BTN0 to initiate voice recording
 5. `make view` will provide SWO output as the device is running.
 6. On your cmd, type
    ```cmd
-   $ python ../python/tools/audioview_esc.py --tty=/dev/tty.usbmodem1234561 --playback=1
+   $ python ../python/tools/audioview_esc.py --tty=/dev/tty.usbmodem1234561  # os-MAC
+      or
+   $ python ../python/tools/audioview_esc.py --tty=/dev/serial/by-id/usb-TinyUSB_TinyUSB_Device_123456-if00  # Ubuntu
+      or
+   $ python ../python/tools/audioview_esc.py --tty=COM4  # windows
    ```
-   You should see a GUI popping out as below. Click the `record` button to start the record. Anc click `stop` button to finish. The top panel will show the raw audio that microphone records, and the bottom one will show the enhanced audio.
+   You should see a GUI popping out as below. 
     <p align="center">
       <img src="./pics/gui.png"  width="80%">
     </p>
 
    - You might need to change the option `--tty` depending on your OS.
-   - The option `playback=1` means you want to play the enhanced speech on the other computer via internet. One simple example is to use MS Teams (see [here](docs/demo.pdf)).
-      - `Note`: we suggest to use earphone on the host side to avoid the echo effect. 
+6. Press `button 0` on the EVB
+7. On GUI, click the `record` button to start the record. Anc click `stop` button to finish. The top panel will show the raw audio that microphone records, and the bottom one will show the trigger signal.
 8. Check the two recording files under `esc/evb/audio_result/`. 
    - `audio_raw.wav`: the raw PCM data from your mic.
-   - `audio_se.wav`: the enhanced speech.
+   - `audio_se.wav`: the trigger signal.
 
 ## Re-Training a New Model
 
