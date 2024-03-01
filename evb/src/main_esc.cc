@@ -11,15 +11,13 @@
 #include "ns_energy_monitor.h"
 #include "nn_speech.h"
 #include "downsample.h"
+#include "ns_rpc_generic_data.h"
 DOWNSAMPLE_CLASS downsample_inst;
 int16_t buf_downsample[160];
-#ifdef DEF_GUI_ENABLE
-#include "ns_rpc_generic_data.h"
-#endif
+
 // #define ENERGY_MEASUREMENT
 #define NUM_CHANNELS 1
 int volatile g_intButtonPressed = 0;
-#define USE_PDM_MICROPHONE
 
 ///Button Peripheral Config Struct
 // #ifdef DEF_GUI_ENABLE
@@ -57,8 +55,6 @@ am_hal_offset_cal_coeffs_array_t sOffsetCalib;
 #endif
 
 
-
-#ifdef DEF_GUI_ENABLE 
 size_t ucHeapSize = NS_RPC_MALLOC_SIZE_IN_K * 4 *1024;
 uint8_t ucHeap[NS_RPC_MALLOC_SIZE_IN_K * 4 *1024] __attribute__((aligned(4)));
 // USB bufffers declared locally
@@ -99,7 +95,7 @@ static ns_rpc_config_t rpcConfig = {
     .sendBlockToEVB_cb = NULL,
     .fetchBlockFromEVB_cb = NULL,
     .computeOnEVB_cb = NULL};
-#endif
+
 
 /**
 * 
@@ -205,10 +201,11 @@ int main(void) {
     ns_lp_printf("Note: You are using \"64bit\" accumulator.\n");
 #endif
 
-#ifdef DEF_GUI_ENABLE
     NS_TRY(ns_rpc_genericDataOperations_init(&rpcConfig), "RPC Init Failed\n"); // init RPC and USB
     ns_lp_printf("Before continuing, please start the PC-side application according to the following instructions\n");
     ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/tty.usbmodem1234561 # MacOS \n");
+    ns_lp_printf("\t\tor\n");
+    ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/ttyACM1 # ubuntu \n");
     ns_lp_printf("\t\tor\n");
     ns_lp_printf("\t> python ../python/tools/audioview_esc.py --tty=COM4 # Windows \n");
     ns_lp_printf("Once the application is started, press EVB Button 0 to connect.\n");
@@ -220,9 +217,7 @@ int main(void) {
     ns_lp_printf("(You might change the \"--tty\" option based on your OS.)\n\n");
     ns_lp_printf("After \'stop\', check the raw recorded speech \'audio_raw.wav\' and enhanced speech \'audio_se.wav\'\n");
     ns_lp_printf("under the folder \'nnsp/evb/audio_result/\'\n\n");
-#else
-    ns_lp_printf("\nPress button to start!\n");
-#endif
+
 
     // tflite_init();
     // test_tflite();
@@ -233,7 +228,7 @@ int main(void) {
         g_intButtonPressed = 0;
         
         ns_deep_sleep();
-#ifdef DEF_GUI_ENABLE
+
         while (1)
         {
             ns_rpc_data_computeOnPC(&computeBlock, &IsRecordBlock);
@@ -247,7 +242,7 @@ int main(void) {
             ns_rpc_data_clientDoneWithBlockFromPC(&IsRecordBlock);
             am_hal_delay_us(20000); 
         }
-#endif
+
         if ( (g_intButtonPressed == 1) && (!g_audioRecording) ) 
         {
             ns_lp_printf("\nYou'd pressed the button. Program start!\n");
@@ -284,7 +279,7 @@ int main(void) {
                     esc_output[0] = detected;
                     // if (detected)
                     //     escCntrlClass_reset(&cntrl_inst);
-#ifdef DEF_GUI_ENABLE
+
                     ns_rpc_data_sendBlockToPC(&pcmBlock);
                     ns_rpc_data_computeOnPC(&computeBlock, &IsRecordBlock);
                     if (IsRecordBlock.buffer.data[0]==0)
@@ -296,7 +291,7 @@ int main(void) {
                         break;
                     }
                     ns_rpc_data_clientDoneWithBlockFromPC(&IsRecordBlock);
-#endif
+
                     g_audioReady = false;
                 }
                 
