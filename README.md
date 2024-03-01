@@ -38,7 +38,7 @@ From the `esc/evb/` directory:
 1. `make clean`
 2. `make # For AUDADC`  \
       or \
-   `make DEF_USE_PDM_MICROPHONE=1 # For AUDADC`
+   `make DEF_USE_PDM_MICROPHONE=1 # For PDM`
 3. `make deploy` Prepare two USB cables. Ensure your board is connected via both the `JLINK USB port` and the `audio USB port`. Then turn on the power on EVB.
 4. Plug a mic into the 3.5mm port, and push BTN0 to initiate voice recording
 5. `make view` will provide SWO output as the device is running.
