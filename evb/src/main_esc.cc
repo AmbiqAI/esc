@@ -28,6 +28,7 @@ int volatile g_intButtonPressed = 0;
 //     .button_1_flag = NULL
 // };
 // #else
+
 ns_button_config_t button_config_nnsp = {
     .api = &ns_button_V1_0_0,
     .button_0_enable = true,
@@ -35,7 +36,7 @@ ns_button_config_t button_config_nnsp = {
     .button_0_flag = &g_intButtonPressed,
     .button_1_flag = NULL
 };
-// #endif
+
 /// Set by app when it wants to start recording, used by callback
 bool volatile static g_audioRecording = false;
 /// Set by callback when audio buffer has been copied, cleared by
@@ -54,18 +55,17 @@ am_hal_audadc_sample_t static workingBuffer[LEN_STFT_HOP];
 am_hal_offset_cal_coeffs_array_t sOffsetCalib;
 #endif
 
-
 size_t ucHeapSize = NS_RPC_MALLOC_SIZE_IN_K * 4 *1024;
 uint8_t ucHeap[NS_RPC_MALLOC_SIZE_IN_K * 4 *1024] __attribute__((aligned(4)));
+
 // USB bufffers declared locally
 #define MY_USB_RX_BUFSIZE 2048
 #define MY_USB_TX_BUFSIZE 2048
 static uint8_t my_cdc_rx_ff_buf[MY_USB_RX_BUFSIZE];
 static uint8_t my_cdc_tx_ff_buf[MY_USB_TX_BUFSIZE];
 
-static char msg_store[30] = "Audio16bPCM_to_WAV";
-char msg_compute[30] = "CalculateMFCC_Please";
 // Block sent to PC
+static char msg_store[30] = "Audio16bPCM_to_WAV";
 static dataBlock pcmBlock = { // the block for pcm
     .length = (LEN_STFT_HOP << 1) * sizeof(int16_t),
     .dType = uint8_e,
@@ -73,7 +73,9 @@ static dataBlock pcmBlock = { // the block for pcm
     .cmd = write_cmd,
     .buffer = {.data = (uint8_t *) g_in16AudioDataBuffer, // point this to audio buffer
                .dataLength = (LEN_STFT_HOP << 1) * sizeof(int16_t)}};
+
 // Block sent to PC for computation
+char msg_compute[30] = "CalculateMFCC_Please";
 dataBlock computeBlock = {  // this block is useless here actually
     .length = (LEN_STFT_HOP << 1) * sizeof(int16_t),
     .dType = uint8_e,
@@ -95,8 +97,6 @@ static ns_rpc_config_t rpcConfig = {
     .sendBlockToEVB_cb = NULL,
     .fetchBlockFromEVB_cb = NULL,
     .computeOnEVB_cb = NULL};
-
-
 /**
 * 
 * @brief Audio Callback (user-defined, executes in IRQ context)
@@ -109,11 +109,9 @@ static ns_rpc_config_t rpcConfig = {
 */
 void
 audio_frame_callback(ns_audio_config_t *config, uint16_t bytesCollected) {
-
     if (g_audioRecording) {
         // if (g_audioReady)
         //     ns_lp_printf("Warning - audio buffer wasnt consumed in time\n");
-        
         ns_audio_getPCM_v2(config, g_in16AudioDataBuffer);
         g_audioReady = true;
     }
@@ -150,7 +148,6 @@ static ns_audio_config_t audio_config = {
     .sOffsetCalib = &sOffsetCalib,
 #endif
 };
-
 
 // const ns_power_config_t ns_lp_audio = {
 //         .eAIPowerMode           = NS_MAXIMUM_PERF,
@@ -218,24 +215,22 @@ int main(void) {
     ns_lp_printf("After \'stop\', check the raw recorded speech \'audio_raw.wav\' and enhanced speech \'audio_se.wav\'\n");
     ns_lp_printf("under the folder \'nnsp/evb/audio_result/\'\n\n");
 
-
     // tflite_init();
     // test_tflite();
 
     while (1) 
     {
         g_audioRecording = false;
-        g_intButtonPressed = 0;
         
         ns_deep_sleep();
 
         while (1)
         {
+            // waiting for the start recording from GUI
             ns_rpc_data_computeOnPC(&computeBlock, &IsRecordBlock);
             if (IsRecordBlock.buffer.data[0]==1)
             {
                 escCntrlClass_reset(&cntrl_inst);
-                g_intButtonPressed = 1;
                 ns_rpc_data_clientDoneWithBlockFromPC(&IsRecordBlock);
                 break;
             }
@@ -243,10 +238,9 @@ int main(void) {
             am_hal_delay_us(20000); 
         }
 
-        if ( (g_intButtonPressed == 1) && (!g_audioRecording) ) 
+        if ( !g_audioRecording )
         {
             ns_lp_printf("\nYou'd pressed the button. Program start!\n");
-            g_intButtonPressed = 0;
             g_audioRecording = true;
             am_hal_delay_us(10);   
             while (1)
@@ -255,6 +249,7 @@ int main(void) {
                 ns_deep_sleep();
                 if (g_audioReady) 
                 {
+                    ns_lp_printf(".");
                     // execution of each time frame data
                     pt_nnsp->pt_params->pre_gain_q1 = IsRecordBlock.buffer.data[1];
                     for (int i = 0; i < LEN_STFT_HOP; i++)
@@ -286,7 +281,6 @@ int main(void) {
                     {
                         g_audioRecording = false;
                         g_audioReady = false;
-                        g_intButtonPressed = 0;
                         ns_rpc_data_clientDoneWithBlockFromPC(&IsRecordBlock);
                         break;
                     }
