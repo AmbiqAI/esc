@@ -202,7 +202,7 @@ int main(void) {
     ns_lp_printf("Before continuing, please start the PC-side application according to the following instructions\n");
     ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/tty.usbmodem1234561 # MacOS \n");
     ns_lp_printf("\t\tor\n");
-    ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/ttyACM1 # ubuntu \n");
+    ns_lp_printf("\t$ python ../python/tools/audioview_esc.py --tty=/dev/serial/by-id/usb-TinyUSB_TinyUSB_Device_123456-if00  # Ubuntu \n");
     ns_lp_printf("\t\tor\n");
     ns_lp_printf("\t> python ../python/tools/audioview_esc.py --tty=COM4 # Windows \n");
     ns_lp_printf("Once the application is started, press EVB Button 0 to connect.\n");
