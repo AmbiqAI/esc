@@ -38,7 +38,10 @@ targets  += $(BINDIR)/$(local_app_name).bin
 ifeq ($(ACC32BIT_OPT),1)
 DEFINES+=DEF_ACC32BIT_OPT
 endif
-DEFINES+=DEF_GUI_ENABLE
+
+ifeq ($(DEF_USE_PDM_MICROPHONE),1)
+DEFINES+=USE_PDM_MICROPHONE
+endif
 
 objects      = $(call source-to-object,$(sources))
 dependencies = $(subst .o,.d,$(objects))
